@@ -1,0 +1,233 @@
+{
+	"basics": {
+		"name": "Alfito Juanda",
+		"label": "AI & Fullstack Web Engineer",
+		"email": "alfitojuanda14@gmail.com",
+		"phone": "+62 822 7427 2717",
+		"website": "",
+		"summary": "Final-year Informatics student focusing on developing Artificial Intelligence solutions (Machine Learning, Deep Learning, and Computer Vision) and their implementation in Fullstack Web applications. Experienced in building projects with Python, FastAPI, React, Next.js, and Supabase, and active in technology research and organizational activities. Strong interest in building data-driven solutions that solve real-world problems efficiently, on-scope, and on-time.",
+		"shortSummary": "AI & Fullstack Web Engineer. Building data-driven, on-scope, and on-time solutions.",
+		"location": {
+			"address": "Special Region of Yogyakarta, 55285",
+			"postalCode": "",
+			"city": "",
+			"countryCode": "ID",
+			"region": ""
+		}
+	},
+	"education": [
+		{
+			"institution": "YOGYAKARTA UNIVERSITY OF TECHNOLOGY",
+			"studyType": "B.Sc. in Informatics",
+			"startDate": "2022",
+			"endDate": "Present",
+			"score": ""
+		},
+		{
+			"institution": "SMKN 5 TELKOM BANDA ACEH",
+			"studyType": "Software Engineering",
+			"startDate": "2019",
+			"endDate": "2022",
+			"score": ""
+		}
+	],
+	"skills": [
+		"Next.js",
+		"FastAPI",
+		"React",
+		"Supabase",
+		"PostgreSQL",
+		"Docker",
+		"PyTorch",
+		"YOLOv11",
+		"FaceNet",
+		"Machine Learning",
+		"Computer Vision",
+		"AI Agents",
+		"Git/GitHub",
+		"Project Scheduling",
+		"Technical Documentation"
+	],
+	"skillsByCategory": [
+		{
+			"category": "Project Management & Collaboration",
+			"skills": [
+				"Project Scheduling",
+				"Progress Tracking & Reporting",
+				"Technical Documentation",
+				"Cross-functional Coordination"
+			]
+		},
+		{
+			"category": "Management Tools",
+			"skills": [
+				"Notion",
+				"Git/GitHub",
+				"Microsoft Office / Google Workspace"
+			]
+		},
+		{
+			"category": "AI & Web",
+			"skills": [
+				"Next.js",
+				"FastAPI",
+				"Supabase",
+				"Machine Learning",
+				"Computer Vision",
+				"AI Agents"
+			]
+		}
+	],
+	"talks": [],
+	"work": [],
+	"experiences_in_organization": [
+		{
+			"organization": "Data Sorceres",
+			"position": "Computer Vision Division",
+			"startDate": "",
+			"endDate": "Present",
+			"summary": "Develop image processing algorithms and research deep learning implementation for real-time object classification."
+		},
+		{
+			"organization": "Himpunan Mahasiswa Informatika",
+			"position": "Ristek Division",
+			"startDate": "",
+			"endDate": "Present",
+			"summary": "Facilitate technical workshops and knowledge-sharing sessions regarding modern web frameworks and machine learning."
+		},
+		{
+			"organization": "UKM Robotika",
+			"position": "Public Relations Division",
+			"startDate": "",
+			"endDate": "Present",
+			"summary": "Coordinate communication with external partners and sponsors, and publish innovation project documentation for public engagement."
+		}
+	],
+	"projects": [
+		{
+			"name": "Facial Ethnicity Detection System",
+			"url": "https://jsret.knpub.com/index.php/jrest/article/view/983",
+			"date": "",
+			"summary": "Journal Publication - Ethnic classification system achieving 94.5% accuracy.",
+			"highlights": [
+				"FaceNet embeddings mapped to SVM classifier",
+				"Tuned via Bayesian Optimization",
+				"Custom diverse dataset curation"
+			],
+			"stack": "Python, FastAPI, PyTorch (FaceNet), SVM"
+		},
+		{
+			"name": "MediSync",
+			"url": "medisync-sand.vercel.app",
+			"date": "",
+			"summary": "AI Hospital Orchestration (Top 10 Finalis Hackvidia Arkavidia 10)",
+			"highlights": [
+				"Automated patient triage prioritization",
+				"AI-powered clinical diagnosis suggestions",
+				"Multi-role access (Admin, Doctor, Nurse)"
+			],
+			"stack": "Next.js 16, FastAPI, Strands AI Agents, Supabase, AWS App Runner"
+		},
+		{
+			"name": "Jivara",
+			"url": "www.jivara.web.id",
+			"date": "",
+			"summary": "AI Medication & Food Interaction Monitor - Capstone project DBS Foundation x Dicoding 2026; integration of Computer Vision & AI reasoning models.",
+			"highlights": [
+				"Real-time object detection via webcam",
+				"Automated cross-referencing of contraindications",
+				"Instant visual alerts for dangerous combinations"
+			],
+			"stack": "Python, YOLOv11, Deep Neural Network"
+		},
+		{
+			"name": "Warung Tante",
+			"url": "www.warungtante.com",
+			"date": "",
+			"summary": "Integrated POS & HRIS Ecosystem",
+			"highlights": [
+				"Real-time synchronised table states",
+				"Geolocation check-ins (5km radius restriction)",
+				"Dashboard analytics for sales & staff"
+			],
+			"stack": "Next.js 14, Supabase (PostgreSQL), Tailwind CSS, Leaflet.js"
+		},
+		{
+			"name": "Warung Tante Landing Page",
+			"url": "https://www.warungtante.com/",
+			"date": "",
+			"summary": "Restaurant landing page for Warung Tante highlighting their best menus and atmosphere.",
+			"highlights": [],
+			"stack": "Landing Page, WebDev"
+		},
+		{
+			"name": "Avocado Sandwich",
+			"url": "https://avocadosandwich.my.id/",
+			"date": "",
+			"summary": "A vibrant landing page for a local band called Avocado Sandwich.",
+			"highlights": [],
+			"stack": "Landing Page, Web"
+		},
+		{
+			"name": "ShipPal",
+			"url": "",
+			"date": "",
+			"summary": "B2B Matchmaking platform (\"Tinder for Business\") using AI Agents.",
+			"highlights": [],
+			"stack": "AI Agents, Matchmaking"
+		},
+		{
+			"name": "Fiscal Sentiment",
+			"url": "",
+			"date": "",
+			"summary": "Machine Learning (SVM/Naive Bayes) text classification using TF-IDF for policy analysis.",
+			"highlights": [],
+			"stack": "SVM, NLP"
+		}
+	],
+	"achievements": [
+		{
+			"title": "Top 10 Finalist Hackvidia Arkavidia 10",
+			"date": "2026",
+			"issuer": ""
+		},
+		{
+			"title": "Highest TOEIC Score in Aceh Province",
+			"date": "2022",
+			"issuer": ""
+		},
+		{
+			"title": "Medal of Excellence in LKS Cyber Security (National)",
+			"date": "2021",
+			"issuer": ""
+		},
+		{
+			"title": "1st Place FLS2N Solo Guitar (City Level)",
+			"date": "2021",
+			"issuer": ""
+		},
+		{
+			"title": "2nd Place KOSN Karate (Provincial Level)",
+			"date": "2021",
+			"issuer": ""
+		},
+		{
+			"title": "1st Place English Debate (City Level)",
+			"date": "2020",
+			"issuer": ""
+		}
+	],
+	"certifications": [],
+	"socials": [
+		{
+			"network": "LinkedIn",
+			"username": "alfito-juanda",
+			"url": "https://www.linkedin.com/in/alfito-juanda/"
+		},
+		{
+			"network": "GitHub",
+			"username": "aljuan14",
+			"url": "https://github.com/aljuan14"
+		}
+	]
+}

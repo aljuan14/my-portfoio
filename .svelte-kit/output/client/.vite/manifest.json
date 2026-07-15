@@ -1,0 +1,509 @@
+{
+  ".svelte-kit/generated/client-optimized/app.js": {
+    "file": "_app/immutable/entry/app.CIsG8eaE.js",
+    "name": "entry/app",
+    "src": ".svelte-kit/generated/client-optimized/app.js",
+    "isEntry": true,
+    "imports": [
+      "_BtJrtIZ5.js",
+      "_Dj-u7iZK.js",
+      "_X7nYlg_2.js",
+      "_Cs2d4Cc4.js",
+      "_nSKK2jrr.js",
+      "_DaQBbwdu.js"
+    ],
+    "dynamicImports": [
+      ".svelte-kit/generated/client-optimized/nodes/0.js",
+      ".svelte-kit/generated/client-optimized/nodes/1.js",
+      ".svelte-kit/generated/client-optimized/nodes/2.js",
+      ".svelte-kit/generated/client-optimized/nodes/3.js",
+      ".svelte-kit/generated/client-optimized/nodes/4.js",
+      ".svelte-kit/generated/shared/error-template.js"
+    ]
+  },
+  ".svelte-kit/generated/client-optimized/nodes/0.js": {
+    "file": "_app/immutable/nodes/0.DsC08UKm.js",
+    "name": "nodes/0",
+    "src": ".svelte-kit/generated/client-optimized/nodes/0.js",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_Cs2d4Cc4.js",
+      "_Dj-u7iZK.js",
+      "_DaQBbwdu.js",
+      "_X7nYlg_2.js",
+      "_BALT6_-x.js",
+      "_zA0CB6Wd.js",
+      "_B2lRCPez.js",
+      "_CWO_knLP.js"
+    ],
+    "css": [
+      "_app/immutable/assets/0.BoEzrhk0.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/inter-cyrillic-ext-400-normal.BQZuk6qB.woff2",
+      "_app/immutable/assets/inter-cyrillic-ext-400-normal.DQukG94-.woff",
+      "_app/immutable/assets/inter-cyrillic-400-normal.obahsSVq.woff2",
+      "_app/immutable/assets/inter-cyrillic-400-normal.HOLc17fK.woff",
+      "_app/immutable/assets/inter-greek-ext-400-normal.DGGRlc-M.woff2",
+      "_app/immutable/assets/inter-greek-ext-400-normal.KugGGMne.woff",
+      "_app/immutable/assets/inter-greek-400-normal.B4URO6DV.woff2",
+      "_app/immutable/assets/inter-greek-400-normal.q2sYcFCs.woff",
+      "_app/immutable/assets/inter-vietnamese-400-normal.DMkecbls.woff2",
+      "_app/immutable/assets/inter-vietnamese-400-normal.Bbgyi5SW.woff",
+      "_app/immutable/assets/inter-latin-ext-400-normal.C1nco2VV.woff2",
+      "_app/immutable/assets/inter-latin-ext-400-normal.77YHD8bZ.woff",
+      "_app/immutable/assets/inter-latin-400-normal.C38fXH4l.woff2",
+      "_app/immutable/assets/inter-latin-400-normal.CyCys3Eg.woff",
+      "_app/immutable/assets/inter-cyrillic-ext-600-normal.Dfes3d0z.woff2",
+      "_app/immutable/assets/inter-cyrillic-ext-600-normal.Bcila6Z-.woff",
+      "_app/immutable/assets/inter-cyrillic-600-normal.CWCymEST.woff2",
+      "_app/immutable/assets/inter-cyrillic-600-normal.4D_pXhcN.woff",
+      "_app/immutable/assets/inter-greek-ext-600-normal.DRtmH8MT.woff2",
+      "_app/immutable/assets/inter-greek-ext-600-normal.B8X0CLgF.woff",
+      "_app/immutable/assets/inter-greek-600-normal.plRanbMR.woff2",
+      "_app/immutable/assets/inter-greek-600-normal.BZpKdvQh.woff",
+      "_app/immutable/assets/inter-vietnamese-600-normal.Cc8MFFhd.woff2",
+      "_app/immutable/assets/inter-vietnamese-600-normal.BuLX-rYi.woff",
+      "_app/immutable/assets/inter-latin-ext-600-normal.D2bJ5OIk.woff2",
+      "_app/immutable/assets/inter-latin-ext-600-normal.CIVaiw4L.woff",
+      "_app/immutable/assets/inter-latin-600-normal.LgqL8muc.woff2",
+      "_app/immutable/assets/inter-latin-600-normal.CiBQ2DWP.woff",
+      "_app/immutable/assets/outfit-latin-ext-700-normal.CI4iH74K.woff2",
+      "_app/immutable/assets/outfit-latin-ext-700-normal.fjS8-Gm7.woff",
+      "_app/immutable/assets/outfit-latin-700-normal.Cu9v6i1X.woff2",
+      "_app/immutable/assets/outfit-latin-700-normal.D4itBLBr.woff",
+      "_app/immutable/assets/outfit-latin-ext-900-normal.D2Agn9b_.woff2",
+      "_app/immutable/assets/outfit-latin-ext-900-normal.P1LUQYP8.woff",
+      "_app/immutable/assets/outfit-latin-900-normal.D7VxKg29.woff2",
+      "_app/immutable/assets/outfit-latin-900-normal.DBTzQ72N.woff"
+    ]
+  },
+  ".svelte-kit/generated/client-optimized/nodes/1.js": {
+    "file": "_app/immutable/nodes/1.ChkvAw66.js",
+    "name": "nodes/1",
+    "src": ".svelte-kit/generated/client-optimized/nodes/1.js",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_Cs2d4Cc4.js",
+      "_Dj-u7iZK.js",
+      "_B2lRCPez.js",
+      "_zA0CB6Wd.js",
+      "_DaQBbwdu.js",
+      "_BALT6_-x.js",
+      "_nSKK2jrr.js"
+    ],
+    "css": [
+      "_app/immutable/assets/1.B2wSLXSW.css"
+    ]
+  },
+  ".svelte-kit/generated/client-optimized/nodes/2.js": {
+    "file": "_app/immutable/nodes/2.DlX6nTuZ.js",
+    "name": "nodes/2",
+    "src": ".svelte-kit/generated/client-optimized/nodes/2.js",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_Cs2d4Cc4.js",
+      "_Dj-u7iZK.js",
+      "_X7nYlg_2.js",
+      "_B2lRCPez.js"
+    ],
+    "css": [
+      "_app/immutable/assets/2.CnvWGKA5.css"
+    ]
+  },
+  ".svelte-kit/generated/client-optimized/nodes/3.js": {
+    "file": "_app/immutable/nodes/3.K2Pwfw8P.js",
+    "name": "nodes/3",
+    "src": ".svelte-kit/generated/client-optimized/nodes/3.js",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_Cs2d4Cc4.js",
+      "_Dj-u7iZK.js",
+      "_X7nYlg_2.js",
+      "_B2lRCPez.js",
+      "_DNrOI5Ly.js",
+      "_zA0CB6Wd.js",
+      "_DaQBbwdu.js"
+    ]
+  },
+  ".svelte-kit/generated/client-optimized/nodes/4.js": {
+    "file": "_app/immutable/nodes/4.DWAIWm2R.js",
+    "name": "nodes/4",
+    "src": ".svelte-kit/generated/client-optimized/nodes/4.js",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_BtJrtIZ5.js",
+      "_-UyI9lYi.js",
+      "_B1K-Qevl.js",
+      "_Cs2d4Cc4.js",
+      "_Dj-u7iZK.js",
+      "_X7nYlg_2.js",
+      "_B2lRCPez.js",
+      "_DNrOI5Ly.js",
+      "_zA0CB6Wd.js"
+    ],
+    "dynamicImports": [
+      "src/lib/content/posts/aws-summit-jakarta-2025.md",
+      "src/lib/content/posts/building-llmao.md",
+      "src/lib/content/posts/deploying-openclaw-aws.md",
+      "src/lib/content/posts/terraform-opentofu-fork.md",
+      "src/lib/content/posts/aws-summit-jakarta-2025.md",
+      "src/lib/content/posts/building-llmao.md",
+      "src/lib/content/posts/deploying-openclaw-aws.md",
+      "src/lib/content/posts/terraform-opentofu-fork.md"
+    ],
+    "css": [
+      "_app/immutable/assets/4.Cq7Q6kvh.css"
+    ]
+  },
+  ".svelte-kit/generated/shared/error-template.js": {
+    "file": "_app/immutable/chunks/wbPk3Yxo.js",
+    "name": "error-template",
+    "src": ".svelte-kit/generated/shared/error-template.js",
+    "isDynamicEntry": true
+  },
+  "_-UyI9lYi.js": {
+    "file": "_app/immutable/chunks/-UyI9lYi.js",
+    "name": "index"
+  },
+  "_B1K-Qevl.js": {
+    "file": "_app/immutable/chunks/B1K-Qevl.js",
+    "name": "state.svelte",
+    "imports": [
+      "_Dj-u7iZK.js",
+      "_DI5hNEVN.js"
+    ]
+  },
+  "_B2lRCPez.js": {
+    "file": "_app/immutable/chunks/B2lRCPez.js",
+    "name": "each",
+    "imports": [
+      "_Dj-u7iZK.js"
+    ]
+  },
+  "_BALT6_-x.js": {
+    "file": "_app/immutable/chunks/BALT6_-x.js",
+    "name": "spring",
+    "imports": [
+      "_Dj-u7iZK.js",
+      "_Cs2d4Cc4.js",
+      "_DI5hNEVN.js"
+    ]
+  },
+  "_BtJrtIZ5.js": {
+    "file": "_app/immutable/chunks/BtJrtIZ5.js",
+    "name": "svelte-component",
+    "imports": [
+      "_Dj-u7iZK.js",
+      "_Cs2d4Cc4.js"
+    ]
+  },
+  "_CWO_knLP.js": {
+    "file": "_app/immutable/chunks/CWO_knLP.js",
+    "name": "entry",
+    "imports": [
+      "_Dj-u7iZK.js",
+      "_DI5hNEVN.js",
+      "_-UyI9lYi.js",
+      "_B1K-Qevl.js"
+    ]
+  },
+  "_Cs2d4Cc4.js": {
+    "file": "_app/immutable/chunks/Cs2d4Cc4.js",
+    "name": "branches",
+    "imports": [
+      "_Dj-u7iZK.js"
+    ]
+  },
+  "_DDDK9kcl.js": {
+    "file": "_app/immutable/chunks/DDDK9kcl.js",
+    "name": "html",
+    "imports": [
+      "_Dj-u7iZK.js",
+      "_Cs2d4Cc4.js"
+    ]
+  },
+  "_DI5hNEVN.js": {
+    "file": "_app/immutable/chunks/DI5hNEVN.js",
+    "name": "index",
+    "imports": [
+      "_Dj-u7iZK.js"
+    ]
+  },
+  "_DNrOI5Ly.js": {
+    "file": "_app/immutable/chunks/DNrOI5Ly.js",
+    "name": "svelte-head",
+    "imports": [
+      "_Dj-u7iZK.js"
+    ]
+  },
+  "_DaQBbwdu.js": {
+    "file": "_app/immutable/chunks/DaQBbwdu.js",
+    "name": "props",
+    "imports": [
+      "_Dj-u7iZK.js",
+      "_DI5hNEVN.js"
+    ]
+  },
+  "_Dj-u7iZK.js": {
+    "file": "_app/immutable/chunks/Dj-u7iZK.js",
+    "name": "index-client"
+  },
+  "_GitHubCard.BoO-CXKB.css": {
+    "file": "_app/immutable/assets/GitHubCard.BoO-CXKB.css",
+    "src": "_GitHubCard.BoO-CXKB.css"
+  },
+  "_X7nYlg_2.js": {
+    "file": "_app/immutable/chunks/X7nYlg_2.js",
+    "name": "if",
+    "imports": [
+      "_Dj-u7iZK.js",
+      "_Cs2d4Cc4.js"
+    ]
+  },
+  "_cwuK4uX0.js": {
+    "file": "_app/immutable/chunks/cwuK4uX0.js",
+    "name": "legacy",
+    "imports": [
+      "_Dj-u7iZK.js"
+    ]
+  },
+  "_mERQEees.js": {
+    "file": "_app/immutable/chunks/mERQEees.js",
+    "name": "GitHubCard",
+    "imports": [
+      "_Cs2d4Cc4.js",
+      "_Dj-u7iZK.js",
+      "_X7nYlg_2.js",
+      "_zA0CB6Wd.js",
+      "_DaQBbwdu.js"
+    ],
+    "css": [
+      "_app/immutable/assets/GitHubCard.BoO-CXKB.css"
+    ]
+  },
+  "_nSKK2jrr.js": {
+    "file": "_app/immutable/chunks/nSKK2jrr.js",
+    "name": "this",
+    "imports": [
+      "_Dj-u7iZK.js"
+    ]
+  },
+  "_zA0CB6Wd.js": {
+    "file": "_app/immutable/chunks/zA0CB6Wd.js",
+    "name": "client",
+    "imports": [
+      "_Dj-u7iZK.js",
+      "_Cs2d4Cc4.js",
+      "_B1K-Qevl.js"
+    ]
+  },
+  "node_modules/@fontsource/inter/files/inter-cyrillic-400-normal.woff": {
+    "file": "_app/immutable/assets/inter-cyrillic-400-normal.HOLc17fK.woff",
+    "src": "node_modules/@fontsource/inter/files/inter-cyrillic-400-normal.woff"
+  },
+  "node_modules/@fontsource/inter/files/inter-cyrillic-400-normal.woff2": {
+    "file": "_app/immutable/assets/inter-cyrillic-400-normal.obahsSVq.woff2",
+    "src": "node_modules/@fontsource/inter/files/inter-cyrillic-400-normal.woff2"
+  },
+  "node_modules/@fontsource/inter/files/inter-cyrillic-600-normal.woff": {
+    "file": "_app/immutable/assets/inter-cyrillic-600-normal.4D_pXhcN.woff",
+    "src": "node_modules/@fontsource/inter/files/inter-cyrillic-600-normal.woff"
+  },
+  "node_modules/@fontsource/inter/files/inter-cyrillic-600-normal.woff2": {
+    "file": "_app/immutable/assets/inter-cyrillic-600-normal.CWCymEST.woff2",
+    "src": "node_modules/@fontsource/inter/files/inter-cyrillic-600-normal.woff2"
+  },
+  "node_modules/@fontsource/inter/files/inter-cyrillic-ext-400-normal.woff": {
+    "file": "_app/immutable/assets/inter-cyrillic-ext-400-normal.DQukG94-.woff",
+    "src": "node_modules/@fontsource/inter/files/inter-cyrillic-ext-400-normal.woff"
+  },
+  "node_modules/@fontsource/inter/files/inter-cyrillic-ext-400-normal.woff2": {
+    "file": "_app/immutable/assets/inter-cyrillic-ext-400-normal.BQZuk6qB.woff2",
+    "src": "node_modules/@fontsource/inter/files/inter-cyrillic-ext-400-normal.woff2"
+  },
+  "node_modules/@fontsource/inter/files/inter-cyrillic-ext-600-normal.woff": {
+    "file": "_app/immutable/assets/inter-cyrillic-ext-600-normal.Bcila6Z-.woff",
+    "src": "node_modules/@fontsource/inter/files/inter-cyrillic-ext-600-normal.woff"
+  },
+  "node_modules/@fontsource/inter/files/inter-cyrillic-ext-600-normal.woff2": {
+    "file": "_app/immutable/assets/inter-cyrillic-ext-600-normal.Dfes3d0z.woff2",
+    "src": "node_modules/@fontsource/inter/files/inter-cyrillic-ext-600-normal.woff2"
+  },
+  "node_modules/@fontsource/inter/files/inter-greek-400-normal.woff": {
+    "file": "_app/immutable/assets/inter-greek-400-normal.q2sYcFCs.woff",
+    "src": "node_modules/@fontsource/inter/files/inter-greek-400-normal.woff"
+  },
+  "node_modules/@fontsource/inter/files/inter-greek-400-normal.woff2": {
+    "file": "_app/immutable/assets/inter-greek-400-normal.B4URO6DV.woff2",
+    "src": "node_modules/@fontsource/inter/files/inter-greek-400-normal.woff2"
+  },
+  "node_modules/@fontsource/inter/files/inter-greek-600-normal.woff": {
+    "file": "_app/immutable/assets/inter-greek-600-normal.BZpKdvQh.woff",
+    "src": "node_modules/@fontsource/inter/files/inter-greek-600-normal.woff"
+  },
+  "node_modules/@fontsource/inter/files/inter-greek-600-normal.woff2": {
+    "file": "_app/immutable/assets/inter-greek-600-normal.plRanbMR.woff2",
+    "src": "node_modules/@fontsource/inter/files/inter-greek-600-normal.woff2"
+  },
+  "node_modules/@fontsource/inter/files/inter-greek-ext-400-normal.woff": {
+    "file": "_app/immutable/assets/inter-greek-ext-400-normal.KugGGMne.woff",
+    "src": "node_modules/@fontsource/inter/files/inter-greek-ext-400-normal.woff"
+  },
+  "node_modules/@fontsource/inter/files/inter-greek-ext-400-normal.woff2": {
+    "file": "_app/immutable/assets/inter-greek-ext-400-normal.DGGRlc-M.woff2",
+    "src": "node_modules/@fontsource/inter/files/inter-greek-ext-400-normal.woff2"
+  },
+  "node_modules/@fontsource/inter/files/inter-greek-ext-600-normal.woff": {
+    "file": "_app/immutable/assets/inter-greek-ext-600-normal.B8X0CLgF.woff",
+    "src": "node_modules/@fontsource/inter/files/inter-greek-ext-600-normal.woff"
+  },
+  "node_modules/@fontsource/inter/files/inter-greek-ext-600-normal.woff2": {
+    "file": "_app/immutable/assets/inter-greek-ext-600-normal.DRtmH8MT.woff2",
+    "src": "node_modules/@fontsource/inter/files/inter-greek-ext-600-normal.woff2"
+  },
+  "node_modules/@fontsource/inter/files/inter-latin-400-normal.woff": {
+    "file": "_app/immutable/assets/inter-latin-400-normal.CyCys3Eg.woff",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-400-normal.woff"
+  },
+  "node_modules/@fontsource/inter/files/inter-latin-400-normal.woff2": {
+    "file": "_app/immutable/assets/inter-latin-400-normal.C38fXH4l.woff2",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-400-normal.woff2"
+  },
+  "node_modules/@fontsource/inter/files/inter-latin-600-normal.woff": {
+    "file": "_app/immutable/assets/inter-latin-600-normal.CiBQ2DWP.woff",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-600-normal.woff"
+  },
+  "node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2": {
+    "file": "_app/immutable/assets/inter-latin-600-normal.LgqL8muc.woff2",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2"
+  },
+  "node_modules/@fontsource/inter/files/inter-latin-ext-400-normal.woff": {
+    "file": "_app/immutable/assets/inter-latin-ext-400-normal.77YHD8bZ.woff",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-ext-400-normal.woff"
+  },
+  "node_modules/@fontsource/inter/files/inter-latin-ext-400-normal.woff2": {
+    "file": "_app/immutable/assets/inter-latin-ext-400-normal.C1nco2VV.woff2",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-ext-400-normal.woff2"
+  },
+  "node_modules/@fontsource/inter/files/inter-latin-ext-600-normal.woff": {
+    "file": "_app/immutable/assets/inter-latin-ext-600-normal.CIVaiw4L.woff",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-ext-600-normal.woff"
+  },
+  "node_modules/@fontsource/inter/files/inter-latin-ext-600-normal.woff2": {
+    "file": "_app/immutable/assets/inter-latin-ext-600-normal.D2bJ5OIk.woff2",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-ext-600-normal.woff2"
+  },
+  "node_modules/@fontsource/inter/files/inter-vietnamese-400-normal.woff": {
+    "file": "_app/immutable/assets/inter-vietnamese-400-normal.Bbgyi5SW.woff",
+    "src": "node_modules/@fontsource/inter/files/inter-vietnamese-400-normal.woff"
+  },
+  "node_modules/@fontsource/inter/files/inter-vietnamese-400-normal.woff2": {
+    "file": "_app/immutable/assets/inter-vietnamese-400-normal.DMkecbls.woff2",
+    "src": "node_modules/@fontsource/inter/files/inter-vietnamese-400-normal.woff2"
+  },
+  "node_modules/@fontsource/inter/files/inter-vietnamese-600-normal.woff": {
+    "file": "_app/immutable/assets/inter-vietnamese-600-normal.BuLX-rYi.woff",
+    "src": "node_modules/@fontsource/inter/files/inter-vietnamese-600-normal.woff"
+  },
+  "node_modules/@fontsource/inter/files/inter-vietnamese-600-normal.woff2": {
+    "file": "_app/immutable/assets/inter-vietnamese-600-normal.Cc8MFFhd.woff2",
+    "src": "node_modules/@fontsource/inter/files/inter-vietnamese-600-normal.woff2"
+  },
+  "node_modules/@fontsource/outfit/files/outfit-latin-700-normal.woff": {
+    "file": "_app/immutable/assets/outfit-latin-700-normal.D4itBLBr.woff",
+    "src": "node_modules/@fontsource/outfit/files/outfit-latin-700-normal.woff"
+  },
+  "node_modules/@fontsource/outfit/files/outfit-latin-700-normal.woff2": {
+    "file": "_app/immutable/assets/outfit-latin-700-normal.Cu9v6i1X.woff2",
+    "src": "node_modules/@fontsource/outfit/files/outfit-latin-700-normal.woff2"
+  },
+  "node_modules/@fontsource/outfit/files/outfit-latin-900-normal.woff": {
+    "file": "_app/immutable/assets/outfit-latin-900-normal.DBTzQ72N.woff",
+    "src": "node_modules/@fontsource/outfit/files/outfit-latin-900-normal.woff"
+  },
+  "node_modules/@fontsource/outfit/files/outfit-latin-900-normal.woff2": {
+    "file": "_app/immutable/assets/outfit-latin-900-normal.D7VxKg29.woff2",
+    "src": "node_modules/@fontsource/outfit/files/outfit-latin-900-normal.woff2"
+  },
+  "node_modules/@fontsource/outfit/files/outfit-latin-ext-700-normal.woff": {
+    "file": "_app/immutable/assets/outfit-latin-ext-700-normal.fjS8-Gm7.woff",
+    "src": "node_modules/@fontsource/outfit/files/outfit-latin-ext-700-normal.woff"
+  },
+  "node_modules/@fontsource/outfit/files/outfit-latin-ext-700-normal.woff2": {
+    "file": "_app/immutable/assets/outfit-latin-ext-700-normal.CI4iH74K.woff2",
+    "src": "node_modules/@fontsource/outfit/files/outfit-latin-ext-700-normal.woff2"
+  },
+  "node_modules/@fontsource/outfit/files/outfit-latin-ext-900-normal.woff": {
+    "file": "_app/immutable/assets/outfit-latin-ext-900-normal.P1LUQYP8.woff",
+    "src": "node_modules/@fontsource/outfit/files/outfit-latin-ext-900-normal.woff"
+  },
+  "node_modules/@fontsource/outfit/files/outfit-latin-ext-900-normal.woff2": {
+    "file": "_app/immutable/assets/outfit-latin-ext-900-normal.D2Agn9b_.woff2",
+    "src": "node_modules/@fontsource/outfit/files/outfit-latin-ext-900-normal.woff2"
+  },
+  "node_modules/@sveltejs/kit/src/runtime/client/entry.js": {
+    "file": "_app/immutable/entry/start.CNd5pf5-.js",
+    "name": "entry/start",
+    "src": "node_modules/@sveltejs/kit/src/runtime/client/entry.js",
+    "isEntry": true,
+    "imports": [
+      "_CWO_knLP.js",
+      "_B1K-Qevl.js"
+    ]
+  },
+  "src/lib/content/posts/aws-summit-jakarta-2025.md": {
+    "file": "_app/immutable/chunks/DTKyEukM.js",
+    "name": "aws-summit-jakarta-2025",
+    "src": "src/lib/content/posts/aws-summit-jakarta-2025.md",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Cs2d4Cc4.js",
+      "_cwuK4uX0.js",
+      "_Dj-u7iZK.js"
+    ]
+  },
+  "src/lib/content/posts/building-llmao.md": {
+    "file": "_app/immutable/chunks/D5UVwUjG.js",
+    "name": "building-llmao",
+    "src": "src/lib/content/posts/building-llmao.md",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Cs2d4Cc4.js",
+      "_cwuK4uX0.js",
+      "_Dj-u7iZK.js",
+      "_DDDK9kcl.js",
+      "_mERQEees.js"
+    ]
+  },
+  "src/lib/content/posts/deploying-openclaw-aws.md": {
+    "file": "_app/immutable/chunks/Dj6oa9Js.js",
+    "name": "deploying-openclaw-aws",
+    "src": "src/lib/content/posts/deploying-openclaw-aws.md",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Cs2d4Cc4.js",
+      "_cwuK4uX0.js",
+      "_Dj-u7iZK.js",
+      "_DDDK9kcl.js",
+      "_mERQEees.js"
+    ]
+  },
+  "src/lib/content/posts/terraform-opentofu-fork.md": {
+    "file": "_app/immutable/chunks/E5xab4nL.js",
+    "name": "terraform-opentofu-fork",
+    "src": "src/lib/content/posts/terraform-opentofu-fork.md",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Cs2d4Cc4.js",
+      "_cwuK4uX0.js",
+      "_Dj-u7iZK.js",
+      "_DDDK9kcl.js"
+    ]
+  }
+}

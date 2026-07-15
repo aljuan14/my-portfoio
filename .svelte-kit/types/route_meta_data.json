@@ -1,0 +1,27 @@
+{
+	"/": [
+		"src/routes/+page.server.js"
+	],
+	"/api/spotify": [
+		"src/routes/api/spotify/+server.js"
+	],
+	"/api/u/c/api/send": [
+		"src/routes/api/u/c/api/send/+server.js"
+	],
+	"/api/u/s": [
+		"src/routes/api/u/s/+server.js"
+	],
+	"/blog": [
+		"src/routes/blog/+page.server.js"
+	],
+	"/blog/[slug]": [
+		"src/routes/blog/[slug]/+page.js"
+	],
+	"/resume": [],
+	"/robots.txt": [
+		"src/routes/robots.txt/+server.js"
+	],
+	"/sitemap.xml": [
+		"src/routes/sitemap.xml/+server.js"
+	]
+}

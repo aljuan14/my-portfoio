@@ -1,0 +1,55 @@
+
+// this file is generated — do not edit it
+
+
+declare module "svelte/elements" {
+	export interface HTMLAttributes<T> {
+		'data-sveltekit-keepfocus'?: true | '' | 'off' | undefined | null;
+		'data-sveltekit-noscroll'?: true | '' | 'off' | undefined | null;
+		'data-sveltekit-preload-code'?:
+			| true
+			| ''
+			| 'eager'
+			| 'viewport'
+			| 'hover'
+			| 'tap'
+			| 'off'
+			| undefined
+			| null;
+		'data-sveltekit-preload-data'?: true | '' | 'hover' | 'tap' | 'off' | undefined | null;
+		'data-sveltekit-reload'?: true | '' | 'off' | undefined | null;
+		'data-sveltekit-replacestate'?: true | '' | 'off' | undefined | null;
+	}
+}
+
+export {};
+
+
+declare module "$app/types" {
+	type MatcherParam<M> = M extends (param : string) => param is (infer U extends string) ? U : string;
+
+	export interface AppTypes {
+		RouteId(): "/" | "/api" | "/api/spotify" | "/api/u" | "/api/u/c" | "/api/u/c/api" | "/api/u/c/api/send" | "/api/u/s" | "/blog" | "/blog/[slug]" | "/resume" | "/robots.txt" | "/sitemap.xml";
+		RouteParams(): {
+			"/blog/[slug]": { slug: string }
+		};
+		LayoutParams(): {
+			"/": { slug?: string | undefined };
+			"/api": Record<string, never>;
+			"/api/spotify": Record<string, never>;
+			"/api/u": Record<string, never>;
+			"/api/u/c": Record<string, never>;
+			"/api/u/c/api": Record<string, never>;
+			"/api/u/c/api/send": Record<string, never>;
+			"/api/u/s": Record<string, never>;
+			"/blog": { slug?: string | undefined };
+			"/blog/[slug]": { slug: string };
+			"/resume": Record<string, never>;
+			"/robots.txt": Record<string, never>;
+			"/sitemap.xml": Record<string, never>
+		};
+		Pathname(): "/" | "/api/spotify" | "/api/u/c/api/send" | "/api/u/s" | "/blog" | `/blog/${string}` & {} | "/resume" | "/robots.txt" | "/sitemap.xml";
+		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
+		Asset(): "/cv.pdf" | "/favicon.svg" | "/images/alfito.png" | "/images/posts/aws-summit-2025/all-volunteers-speakers.jpg" | "/images/posts/aws-summit-2025/speaking.jpg" | "/images/posts/aws-summit-2025/with-albert-irfan.jpg" | "/images/posts/aws-summit-2025/with-jason.jpg" | "/images/posts/aws-summit-2025/with-shafraz-cathy.jpg" | "/images/posts/llmao/benchmark.png" | "/resume.pdf" | "/robots.txt" | string & {};
+	}
+}
