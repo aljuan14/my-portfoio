@@ -113,7 +113,7 @@
 		<!-- Main Layout -->
 		<div class="flex-1 flex flex-col w-full h-[calc(100vh-2rem)] overflow-y-auto overflow-x-hidden scroll-smooth">
 			<!-- Dashboard Grid -->
-			<div class="flex flex-col lg:flex-row gap-6 w-full max-w-[1400px] mx-auto px-4 lg:px-12 py-8 lg:py-12 min-h-[calc(100vh-3rem)] items-stretch lg:justify-between">
+			<div class="flex flex-col lg:flex-row gap-6 w-full px-2 lg:px-4 py-4 min-h-[calc(100vh-3rem)] items-center">
 				<!-- Left side widgets -->
 				<div class="w-full lg:w-64 flex flex-col gap-6">
 					<!-- Deploy Widget -->
