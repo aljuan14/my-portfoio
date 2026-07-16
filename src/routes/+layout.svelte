@@ -77,26 +77,26 @@
 	class:opacity-0={!introComplete}
 >
 	{#if $page.url.pathname.startsWith('/blog/')}
-	<nav
-		class="fixed top-2 left-2 right-2 z-50 h-7 bg-zinc-800/70 backdrop-blur-2xl border border-white/10 rounded-xl flex items-center justify-between px-4 select-none shadow-lg"
-	>
-		<a
-			href={resolve('/')}
-			class="text-[12px] font-medium text-zinc-400 hover:text-white transition-colors flex items-center gap-1.5"
+		<nav
+			class="fixed top-2 left-2 right-2 z-50 h-7 bg-zinc-800/70 backdrop-blur-2xl border border-white/10 rounded-xl flex items-center justify-between px-4 select-none shadow-lg"
 		>
-			<svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-				<path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-			</svg>
-			Desktop
-		</a>
-		<span class="text-[12px] text-zinc-500">Alfito Juanda</span>
-		<a
-			href={resolve('/?open=blog')}
-			class="text-[12px] font-medium text-zinc-400 hover:text-white transition-colors"
-		>
-			All Posts
-		</a>
-	</nav>
+			<a
+				href={resolve('/')}
+				class="text-[12px] font-medium text-zinc-400 hover:text-white transition-colors flex items-center gap-1.5"
+			>
+				<svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+				</svg>
+				Desktop
+			</a>
+			<span class="text-[12px] text-zinc-500">Alfito Juanda</span>
+			<a
+				href={resolve('/?open=blog')}
+				class="text-[12px] font-medium text-zinc-400 hover:text-white transition-colors"
+			>
+				All Posts
+			</a>
+		</nav>
 	{/if}
 
 	{@render children()}

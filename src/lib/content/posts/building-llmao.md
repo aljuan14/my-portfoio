@@ -23,7 +23,7 @@ But that got me thinking.
 
 Here's the thing. As a student, I use free tier API keys a lot. And so do my friends. We're always hitting rate limits. Like, constantly.
 
-You know that feeling when you're in the middle of working on something, and suddenly... *429 Too Many Requests*. Annoying, right?
+You know that feeling when you're in the middle of working on something, and suddenly... _429 Too Many Requests_. Annoying, right?
 
 So we'd swap API keys manually. Or wait. Or just give up for the day.
 
@@ -50,6 +50,7 @@ I was wrong.
 ![LLMAO vs LiteLLM Performance Benchmark](/images/posts/llmao/benchmark.png)
 
 Look at those numbers:
+
 - **Cold start**: ~100x faster
 - **Memory usage**: ~7x less
 - **Latency (p99)**: nearly half

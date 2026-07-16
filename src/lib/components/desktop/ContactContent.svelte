@@ -24,7 +24,9 @@
 		>
 			<div class="text-3xl mb-3">✉️</div>
 			<p class="text-xs text-zinc-500 uppercase tracking-widest mb-1 font-mono">Email</p>
-			<p class="text-sm text-zinc-300 group-hover:text-white transition-colors break-all">{email}</p>
+			<p class="text-sm text-zinc-300 group-hover:text-white transition-colors break-all">
+				{email}
+			</p>
 		</a>
 
 		<!-- Phone -->
@@ -61,7 +63,9 @@
 					rel="noopener noreferrer"
 					class="group flex items-center gap-3 p-4 bg-zinc-800/30 border border-zinc-700/50 rounded-xl hover:border-zinc-600 hover:bg-zinc-800/60 transition-all duration-300"
 				>
-					<span class="text-sm font-medium text-zinc-400 group-hover:text-white transition-colors">{social.network}</span>
+					<span class="text-sm font-medium text-zinc-400 group-hover:text-white transition-colors"
+						>{social.network}</span
+					>
 					<span class="text-xs text-zinc-600 ml-auto">@{social.username}</span>
 				</a>
 			{/each}

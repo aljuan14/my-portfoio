@@ -60,11 +60,7 @@
 		},
 		{
 			"category": "Management Tools",
-			"skills": [
-				"Notion",
-				"Git/GitHub",
-				"Microsoft Office / Google Workspace"
-			]
+			"skills": ["Notion", "Git/GitHub", "Microsoft Office / Google Workspace"]
 		},
 		{
 			"category": "AI & Web",

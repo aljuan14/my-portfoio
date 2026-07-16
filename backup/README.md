@@ -19,6 +19,7 @@ A modern, responsive, single-page developer portfolio built to showcase projects
 ## Featured Projects
 
 This portfolio highlights several key projects:
+
 - MediSync: AI Hospital Orchestration system featuring automated triage and clinical diagnosis suggestions.
 - Jivara: AI Medication Interaction Monitor utilizing computer vision to prevent dangerous food and drug contraindications.
 - Warung Tante: Integrated POS & HRIS system with geolocation-based attendance tracking.
@@ -40,6 +41,7 @@ Since this is a static single-page application without any complex build steps, 
 ## Contact
 
 Alfito Juanda
+
 - Email: alfitojuanda14@gmail.com
 - LinkedIn: https://www.linkedin.com/in/alfito-juanda/
 - GitHub: https://github.com/aljuan14

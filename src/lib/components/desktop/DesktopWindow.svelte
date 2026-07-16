@@ -13,7 +13,9 @@
 	$effect(() => {
 		document.body.style.overflow = 'hidden';
 		canClose = false;
-		const timer = setTimeout(() => { canClose = true; }, 100);
+		const timer = setTimeout(() => {
+			canClose = true;
+		}, 100);
 		return () => {
 			document.body.style.overflow = '';
 			clearTimeout(timer);
@@ -52,9 +54,7 @@
 		tabindex="-1"
 	>
 		<!-- Title Bar -->
-		<div
-			class="h-12 bg-zinc-800 flex items-center px-4 shrink-0 border-b border-zinc-700/50"
-		>
+		<div class="h-12 bg-zinc-800 flex items-center px-4 shrink-0 border-b border-zinc-700/50">
 			<!-- Traffic Lights -->
 			<div class="flex items-center gap-2">
 				<button
@@ -70,7 +70,12 @@
 						viewBox="0 0 12 12"
 						fill="currentColor"
 					>
-						<path d="M3.5 3.5l5 5M8.5 3.5l-5 5" stroke="currentColor" stroke-width="1.5" fill="none" />
+						<path
+							d="M3.5 3.5l5 5M8.5 3.5l-5 5"
+							stroke="currentColor"
+							stroke-width="1.5"
+							fill="none"
+						/>
 					</svg>
 				</button>
 				<div class="w-3 h-3 rounded-full bg-[#febc2e]"></div>
@@ -84,8 +89,18 @@
 
 			<!-- Search -->
 			<div class="relative w-44">
-				<svg class="absolute left-2 top-1/2 -translate-y-1/2 w-3 h-3 text-zinc-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+				<svg
+					class="absolute left-2 top-1/2 -translate-y-1/2 w-3 h-3 text-zinc-500"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					viewBox="0 0 24 24"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+					/>
 				</svg>
 				<input
 					type="text"

@@ -14,7 +14,9 @@
 	$effect(() => {
 		document.body.style.overflow = 'hidden';
 		canClose = false;
-		const timer = setTimeout(() => { canClose = true; }, 100);
+		const timer = setTimeout(() => {
+			canClose = true;
+		}, 100);
 		return () => {
 			document.body.style.overflow = '';
 			clearTimeout(timer);

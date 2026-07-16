@@ -24,7 +24,11 @@
 		{#each filtered as project (project.name)}
 			{@const hasUrl = project.url}
 			<a
-				href={hasUrl ? (project.url.startsWith('http') ? project.url : `https://${project.url}`) : undefined}
+				href={hasUrl
+					? project.url.startsWith('http')
+						? project.url
+						: `https://${project.url}`
+					: undefined}
 				target={hasUrl ? '_blank' : undefined}
 				rel={hasUrl ? 'noopener noreferrer' : undefined}
 				class="group flex flex-col md:flex-row md:items-center gap-2 md:gap-6 p-5 rounded-xl hover:bg-zinc-800/50 transition-all duration-200 border border-transparent hover:border-zinc-700/50"
@@ -63,7 +67,12 @@
 						stroke="currentColor"
 						viewBox="0 0 24 24"
 					>
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+						/>
 					</svg>
 				{/if}
 			</a>

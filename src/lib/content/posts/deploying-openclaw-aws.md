@@ -2,7 +2,7 @@
 title: 'Running Your Own AI Assistant on AWS with OpenClaw'
 date: '2026-03-20'
 description: 'I deployed OpenClaw on AWS to run my own AI assistant. Here is how I did it and why it was worth it.'
-tags: ['aws', 'ai','infrastructure', 'openclaw']
+tags: ['aws', 'ai', 'infrastructure', 'openclaw']
 ---
 
 <script>
@@ -43,7 +43,7 @@ OpenClaw is a self-hosted AI assistant platform. You install it on your own serv
 
 The project has an interesting history too. It went through several name changes, from Warelay to Clawd to Molty, before finally landing on OpenClaw. The rename happened after Anthropic reached out about trademark concerns with "Clawd", and the team migrated everything in about three hours. Different name, same project. If you're curious about the full story, there's [the official lore](https://docs.openclaw.ai/start/lore) which is genuinely entertaining.
 
-There are also lighter community forks like [NanoClaw](https://github.com/qwibitai/nanoclaw), [PicoClaw](https://github.com/sipeed/picoclaw), [ZeroClaw](https://github.com/zeroclaw-labs/zeroclaw), and many others. 
+There are also lighter community forks like [NanoClaw](https://github.com/qwibitai/nanoclaw), [PicoClaw](https://github.com/sipeed/picoclaw), [ZeroClaw](https://github.com/zeroclaw-labs/zeroclaw), and many others.
 
 ## Deploying It on AWS
 

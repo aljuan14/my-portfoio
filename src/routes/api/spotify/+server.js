@@ -29,17 +29,14 @@ async function fetchSpotifyEntity(url) {
  * @param {string} playlistId
  */
 async function fetchPlaylist(playlistId) {
-	const entity = await fetchSpotifyEntity(
-		`https://open.spotify.com/embed/playlist/${playlistId}`
-	);
+	const entity = await fetchSpotifyEntity(`https://open.spotify.com/embed/playlist/${playlistId}`);
 	if (!entity) return null;
 
 	return {
 		id: entity.id,
 		name: entity.name || entity.title,
 		owner: entity.subtitle || '',
-		coverArt:
-			entity.coverArt?.sources?.[0]?.url ?? entity.visualIdentity?.image?.[0]?.url ?? '',
+		coverArt: entity.coverArt?.sources?.[0]?.url ?? entity.visualIdentity?.image?.[0]?.url ?? '',
 		trackCount: entity.trackList?.length ?? 0,
 		tracks: (entity.trackList ?? []).map((t) => ({
 			title: t.title,
@@ -54,13 +51,16 @@ async function fetchPlaylist(playlistId) {
 export async function GET() {
 	const userId = env.PUBLIC_SPOTIFY_USER_ID;
 	const playlistCsv = env.PUBLIC_SPOTIFY_PLAYLIST_IDS || '';
-	const playlistIds = playlistCsv.split(',').map((s) => s.trim()).filter(Boolean);
+	const playlistIds = playlistCsv
+		.split(',')
+		.map((s) => s.trim())
+		.filter(Boolean);
 
 	if (!userId || playlistIds.length === 0) {
-		return new Response(
-			JSON.stringify({ error: 'Spotify env vars not configured' }),
-			{ status: 500, headers: { 'Content-Type': 'application/json' } }
-		);
+		return new Response(JSON.stringify({ error: 'Spotify env vars not configured' }), {
+			status: 500,
+			headers: { 'Content-Type': 'application/json' }
+		});
 	}
 
 	try {
@@ -89,9 +89,9 @@ export async function GET() {
 			}
 		);
 	} catch {
-		return new Response(
-			JSON.stringify({ error: 'Failed to fetch Spotify data' }),
-			{ status: 500, headers: { 'Content-Type': 'application/json' } }
-		);
+		return new Response(JSON.stringify({ error: 'Failed to fetch Spotify data' }), {
+			status: 500,
+			headers: { 'Content-Type': 'application/json' }
+		});
 	}
 }

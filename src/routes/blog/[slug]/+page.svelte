@@ -47,7 +47,9 @@
 		</header>
 
 		<!-- Content -->
-		<div class="blog-content prose prose-invert prose-zinc max-w-none prose-lg prose-headings:font-outfit prose-headings:font-bold prose-p:font-light prose-p:leading-loose prose-p:text-zinc-300 prose-a:text-blue-400 prose-a:no-underline hover:prose-a:text-blue-300 prose-strong:text-white prose-strong:font-semibold prose-code:text-emerald-400 prose-code:font-mono prose-code:text-sm prose-ul:text-zinc-300 prose-ol:text-zinc-300 prose-li:text-zinc-300 prose-img:rounded-xl prose-img:border prose-img:border-zinc-800">
+		<div
+			class="blog-content prose prose-invert prose-zinc max-w-none prose-lg prose-headings:font-outfit prose-headings:font-bold prose-p:font-light prose-p:leading-loose prose-p:text-zinc-300 prose-a:text-blue-400 prose-a:no-underline hover:prose-a:text-blue-300 prose-strong:text-white prose-strong:font-semibold prose-code:text-emerald-400 prose-code:font-mono prose-code:text-sm prose-ul:text-zinc-300 prose-ol:text-zinc-300 prose-li:text-zinc-300 prose-img:rounded-xl prose-img:border prose-img:border-zinc-800"
+		>
 			<data.content />
 		</div>
 

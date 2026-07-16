@@ -82,6 +82,7 @@ Same syntax. Same providers. Same state files (mostly).
 ### Installation
 
 **Terraform:**
+
 ```bash
 # Using tfenv
 tfenv install 1.7.0
@@ -89,6 +90,7 @@ tfenv use 1.7.0
 ```
 
 **OpenTofu:**
+
 ```bash
 # Using tofuenv (yes, they made their own version manager)
 tofuenv install 1.6.0
@@ -160,7 +162,7 @@ More intuitive than Terraform's testing approach.
 ```hcl
 module "vpc" {
   for_each = toset(["dev", "staging", "prod"])
-  
+
   source = "./modules/vpc"
   env    = each.key
 }
@@ -183,12 +185,14 @@ Neither approach is wrong. They're just different.
 Honestly? Depends.
 
 **Stick with Terraform if:**
+
 - You're already using Terraform Cloud
 - You want official HashiCorp support
 - You don't care about the license
 - Your company has a HashiCorp contract
 
 **Consider OpenTofu if:**
+
 - You want true open source
 - You're building commercial tools around IaC
 - You like community-driven development
@@ -215,7 +219,7 @@ It's the circle of open source life.
 Redis → Valkey  
 MySQL → MariaDB  
 Elasticsearch → OpenSearch  
-Terraform → OpenTofu  
+Terraform → OpenTofu
 
 Who's next? MongoDB? Docker? We'll see.
 
