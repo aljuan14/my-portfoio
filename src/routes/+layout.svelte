@@ -107,13 +107,6 @@
 		scroll-behavior: smooth;
 		background-color: #09090b; /* zinc-950 */
 	}
-	
-	/* Scale up the layout on desktop to match the 110% zoom preference */
-	@media (min-width: 1024px) {
-		:global(html) {
-			font-size: 110%;
-		}
-	}
 	:global(body) {
 		font-family: 'Inter', sans-serif;
 	}
