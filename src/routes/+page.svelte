@@ -47,6 +47,87 @@
 	);
 
 	let currentTime = $state(new Date());
+	let showRomantic = $state(false);
+	let flowers = $state([]);
+	let fireworks = $state([]);
+	let petals = $state([]);
+
+	$effect(() => {
+		if (showRomantic) {
+			document.documentElement.style.overflow = 'hidden';
+			document.documentElement.classList.add('no-scroll');
+			document.body.style.overflow = 'hidden';
+			document.body.classList.add('no-scroll');
+		} else {
+			document.documentElement.style.overflow = '';
+			document.documentElement.classList.remove('no-scroll');
+			document.body.style.overflow = '';
+			document.body.classList.remove('no-scroll');
+		}
+	});
+
+	function openRomantic() {
+		showRomantic = true;
+		spawnFlowers();
+		spawnFireworks();
+		spawnPetals();
+	}
+
+	function closeRomantic() {
+		showRomantic = false;
+		flowers = [];
+		fireworks = [];
+		petals = [];
+	}
+
+	function spawnFlowers() {
+		const flowerEmojis = ['🌸', '🌺', '🌼', '🌻', '🌹', '💐', '🌷', '🪷', '🌸', '🌺', '🌸', '🌷'];
+		const newFlowers = [];
+		for (let i = 0; i < 50; i++) {
+			// Alternate sway direction for natural zigzag look
+			const swayDir = Math.random() > 0.5 ? 1 : -1;
+			newFlowers.push({
+				id: i,
+				emoji: flowerEmojis[Math.floor(Math.random() * flowerEmojis.length)],
+				left: Math.random() * 105,
+				delay: -(Math.random() * 8), // negative delay = pre-started = always visible
+				duration: 4 + Math.random() * 6,
+				size: 1 + Math.random() * 2.2,
+				swayAmount: swayDir * (20 + Math.random() * 80)
+			});
+		}
+		flowers = newFlowers;
+	}
+
+	function spawnFireworks() {
+		const colors = ['#ff69b4', '#ff1493', '#ff6eb4', '#ffb6c1', '#ffd700', '#ff4500', '#ff8c00'];
+		const newFw = [];
+		for (let i = 0; i < 15; i++) {
+			newFw.push({
+				id: i,
+				x: 10 + Math.random() * 80,
+				y: 10 + Math.random() * 60,
+				color: colors[Math.floor(Math.random() * colors.length)],
+				delay: Math.random() * 3,
+				size: 60 + Math.random() * 80
+			});
+		}
+		fireworks = newFw;
+	}
+
+	function spawnPetals() {
+		const newPetals = [];
+		for (let i = 0; i < 40; i++) {
+			newPetals.push({
+				id: i,
+				left: Math.random() * 105,
+				delay: -(Math.random() * 8), // pre-start so petals are visible immediately
+				duration: 3 + Math.random() * 5,
+				rotate: Math.random() * 360
+			});
+		}
+		petals = newPetals;
+	}
 
 	onMount(() => {
 		const timer = setInterval(() => {
@@ -364,6 +445,14 @@
 										>
 										{t.viewCv}
 									</a>
+									<!-- 💖 For You Button -->
+									<button
+										onclick={openRomantic}
+										class="for-you-btn px-6 py-3 rounded-xl font-bold text-sm flex items-center gap-2"
+									>
+										<span class="heart-icon">💖</span>
+										For You
+									</button>
 								</div>
 							</div>
 
@@ -708,10 +797,107 @@
 	</div>
 </div>
 
+<!-- 💖 Romantic Modal Overlay -->
+{#if showRomantic}
+	<div class="romantic-overlay" role="dialog" aria-modal="true" aria-label="A message for Bella">
+		<!-- Fireworks -->
+		{#each fireworks as fw (fw.id)}
+			<div
+				class="firework"
+				style="left:{fw.x}%; top:{fw.y}%; --delay:{fw.delay}s; --color:{fw.color}; --size:{fw.size}px;"
+			></div>
+		{/each}
+
+		<!-- Falling Flowers -->
+		{#each flowers as flower (flower.id)}
+			<div
+				class="falling-flower"
+				style="left:{flower.left}%; animation-delay:{flower.delay}s; animation-duration:{flower.duration}s; font-size:{flower.size}rem; --sway:{flower.swayAmount}px;"
+			>
+				{flower.emoji}
+			</div>
+		{/each}
+
+		<!-- Falling Petals -->
+		{#each petals as petal (petal.id)}
+			<div
+				class="falling-petal"
+				style="left:{petal.left}%; animation-delay:{petal.delay}s; animation-duration:{petal.duration}s; --rotate:{petal.rotate}deg;"
+			></div>
+		{/each}
+
+		<!-- Center Content -->
+		<div class="romantic-content">
+			<!-- Close button -->
+			<button class="close-btn" onclick={closeRomantic} aria-label="Close"> ✕ </button>
+
+			<!-- Romantic Message Card -->
+			<div class="message-card">
+				<div class="hearts-row">
+					<span class="float-heart" style="animation-delay:0s">💗</span>
+					<span class="float-heart" style="animation-delay:0.3s">💕</span>
+					<span class="float-heart" style="animation-delay:0.6s">💖</span>
+					<span class="float-heart" style="animation-delay:0.9s">💝</span>
+					<span class="float-heart" style="animation-delay:1.2s">💗</span>
+				</div>
+
+				<p class="romantic-for">✨ For You ✨</p>
+				<h2 class="romantic-name">Bella</h2>
+				<p class="romantic-message">
+					&ldquo;Setiap hari bersamamu adalah hadiah terindah yang sekarang aku miliki. Aku ingin
+					selalu mendengar suaramu di pagi hari sayang. Kamu adalah cahaya indah di hari-hariku.
+					Senyum manismu adalah alasan aku selalu tersenyum. Aku tidak bisa membayangkan hidup
+					tanpamu&hellip;
+					<br /><br />
+					<strong>Please stay with me. 🌸</strong>&rdquo;
+				</p>
+
+				<div class="romantic-divider">— 💌 —</div>
+
+				<!-- Thumbelina Bouquet -->
+				<div class="bouquet-container">
+					<div class="bouquet-wrap">
+						<!-- Flowers in bouquet -->
+						<div class="bouquet-flowers">
+							<span class="b-flower b-f1">🌸</span>
+							<span class="b-flower b-f2">🌺</span>
+							<span class="b-flower b-f3">🌼</span>
+							<span class="b-flower b-f4">🌷</span>
+							<span class="b-flower b-f5">🪷</span>
+							<span class="b-flower b-f6">🌹</span>
+							<span class="b-flower b-f7">💐</span>
+						</div>
+						<!-- Thumbelina character -->
+						<div class="thumbelina">
+							<div class="thumb-body">
+								<div class="thumb-head">👧</div>
+								<div class="thumb-dress">👗</div>
+							</div>
+							<div class="thumb-wings">🦋</div>
+						</div>
+						<!-- Bouquet wrap ribbon -->
+						<div class="bouquet-ribbon">
+							<div class="ribbon-body"></div>
+							<div class="ribbon-bow">🎀</div>
+						</div>
+					</div>
+					<p class="bouquet-label">Specially for Bella 💕</p>
+				</div>
+			</div>
+		</div>
+	</div>
+{/if}
+
 <style>
 	:global(body) {
 		margin: 0;
 		background-color: #070b14;
+	}
+
+	:global(html.no-scroll),
+	:global(body.no-scroll) {
+		overflow: hidden !important;
+		height: 100% !important;
 	}
 
 	/* Custom scrollbar for the main content area */
@@ -727,5 +913,544 @@
 	}
 	.overflow-y-auto::-webkit-scrollbar-thumb:hover {
 		background: rgba(16, 185, 129, 0.4);
+	}
+
+	/* ===== FOR YOU BUTTON ===== */
+	.for-you-btn {
+		background: linear-gradient(135deg, #ff69b4, #ff1493, #c2185b);
+		color: white;
+		border: none;
+		cursor: pointer;
+		position: relative;
+		overflow: hidden;
+		transition: all 0.3s ease;
+		box-shadow:
+			0 0 20px rgba(255, 105, 180, 0.4),
+			0 0 40px rgba(255, 20, 147, 0.2);
+		animation: pulse-pink 2s infinite;
+	}
+	.for-you-btn:hover {
+		transform: scale(1.08) translateY(-2px);
+		box-shadow:
+			0 0 30px rgba(255, 105, 180, 0.7),
+			0 0 60px rgba(255, 20, 147, 0.4);
+		background: linear-gradient(135deg, #ff85c2, #ff1493, #e91e8c);
+	}
+	.for-you-btn::before {
+		content: '';
+		position: absolute;
+		top: -50%;
+		left: -60%;
+		width: 40%;
+		height: 200%;
+		background: rgba(255, 255, 255, 0.3);
+		transform: skewX(-20deg);
+		animation: shimmer-btn 2.5s infinite;
+	}
+	.heart-icon {
+		display: inline-block;
+		animation: heartbeat 1.2s infinite;
+	}
+	@keyframes heartbeat {
+		0%,
+		100% {
+			transform: scale(1);
+		}
+		50% {
+			transform: scale(1.3);
+		}
+	}
+	@keyframes pulse-pink {
+		0%,
+		100% {
+			box-shadow:
+				0 0 20px rgba(255, 105, 180, 0.4),
+				0 0 40px rgba(255, 20, 147, 0.2);
+		}
+		50% {
+			box-shadow:
+				0 0 35px rgba(255, 105, 180, 0.7),
+				0 0 70px rgba(255, 20, 147, 0.4);
+		}
+	}
+	@keyframes shimmer-btn {
+		0% {
+			left: -60%;
+		}
+		100% {
+			left: 120%;
+		}
+	}
+
+	/* ===== ROMANTIC OVERLAY ===== */
+	.romantic-overlay {
+		position: fixed;
+		inset: 0;
+		background: radial-gradient(ellipse at center, #1a0010 0%, #0d0008 40%, #050004 100%);
+		z-index: 9999;
+		overflow: hidden;
+		clip-path: inset(0);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		animation: overlayIn 0.5s ease;
+	}
+	@keyframes overlayIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	/* ===== FALLING FLOWERS ===== */
+	.falling-flower {
+		position: fixed;
+		top: -120px;
+		z-index: 10000;
+		animation: flowerFall ease-in-out infinite;
+		user-select: none;
+		pointer-events: none;
+		will-change: transform, opacity;
+	}
+	@keyframes flowerFall {
+		0% {
+			transform: translateY(0) translateX(0px) rotate(0deg) scale(0.6);
+			opacity: 0;
+		}
+		5% {
+			opacity: 1;
+			transform: translateY(5vh) translateX(8px) rotate(15deg) scale(1);
+		}
+		25% {
+			transform: translateY(25vh) translateX(var(--sway, 40px)) rotate(90deg) scale(1.1);
+		}
+		50% {
+			transform: translateY(50vh) translateX(calc(var(--sway, 40px) * -0.5)) rotate(180deg)
+				scale(0.95);
+			opacity: 1;
+		}
+		75% {
+			transform: translateY(75vh) translateX(var(--sway, 40px)) rotate(270deg) scale(1.05);
+			opacity: 0.8;
+		}
+		95% {
+			opacity: 0.3;
+		}
+		100% {
+			transform: translateY(110vh) translateX(0px) rotate(360deg) scale(0.7);
+			opacity: 0;
+		}
+	}
+
+	/* ===== FALLING PETALS ===== */
+	.falling-petal {
+		position: fixed;
+		top: -20px;
+		z-index: 10000;
+		width: 12px;
+		height: 14px;
+		background: radial-gradient(ellipse, #ffb6c1 0%, #ff69b4 60%, #ff1493 100%);
+		border-radius: 60% 40% 60% 40% / 50% 50% 50% 50%;
+		animation: petalFall ease-in-out infinite;
+		pointer-events: none;
+		will-change: transform, opacity;
+	}
+	@keyframes petalFall {
+		0% {
+			transform: translateY(0) rotate(var(--rotate, 0deg)) scale(0);
+			opacity: 0;
+		}
+		8% {
+			opacity: 0.9;
+			transform: translateY(8vh) rotate(calc(var(--rotate, 0deg) + 45deg)) scale(1);
+		}
+		50% {
+			transform: translateY(50vh) rotate(calc(var(--rotate, 0deg) + 200deg)) scale(1.1);
+			opacity: 0.8;
+		}
+		90% {
+			opacity: 0.2;
+		}
+		100% {
+			transform: translateY(110vh) rotate(calc(var(--rotate, 0deg) + 420deg)) scale(0.6);
+			opacity: 0;
+		}
+	}
+
+	/* ===== FIREWORKS ===== */
+	.firework {
+		position: fixed;
+		z-index: 10001;
+		pointer-events: none;
+		animation: fireworkBurst 1.5s ease-out infinite;
+		animation-delay: var(--delay, 0s);
+	}
+	.firework::before,
+	.firework::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: var(--size, 80px);
+		height: var(--size, 80px);
+		margin-left: calc(var(--size, 80px) / -2);
+		margin-top: calc(var(--size, 80px) / -2);
+		border-radius: 50%;
+		background: radial-gradient(circle, var(--color, #ff69b4) 0%, transparent 70%);
+		animation: fireworkRing 1.5s ease-out infinite;
+		animation-delay: var(--delay, 0s);
+	}
+	.firework::after {
+		width: calc(var(--size, 80px) * 0.5);
+		height: calc(var(--size, 80px) * 0.5);
+		margin-left: calc(var(--size, 80px) * -0.25);
+		margin-top: calc(var(--size, 80px) * -0.25);
+		animation-delay: calc(var(--delay, 0s) + 0.2s);
+	}
+	@keyframes fireworkBurst {
+		0% {
+			transform: scale(0);
+			opacity: 1;
+		}
+		60% {
+			opacity: 1;
+		}
+		100% {
+			transform: scale(1);
+			opacity: 0;
+		}
+	}
+	@keyframes fireworkRing {
+		0% {
+			transform: scale(0);
+			opacity: 1;
+		}
+		100% {
+			transform: scale(1.5);
+			opacity: 0;
+		}
+	}
+
+	/* ===== CLOSE BUTTON ===== */
+	.close-btn {
+		position: fixed;
+		top: 1.5rem;
+		right: 1.5rem;
+		z-index: 10010;
+		width: 44px;
+		height: 44px;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.1);
+		border: 1px solid rgba(255, 105, 180, 0.4);
+		color: #ffb6c1;
+		font-size: 1rem;
+		cursor: pointer;
+		transition: all 0.2s;
+		backdrop-filter: blur(10px);
+	}
+	.close-btn:hover {
+		background: rgba(255, 20, 147, 0.3);
+		transform: scale(1.1) rotate(90deg);
+		border-color: #ff69b4;
+	}
+
+	/* ===== ROMANTIC CONTENT ===== */
+	.romantic-content {
+		position: relative;
+		z-index: 10005;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		padding: 2rem;
+		box-sizing: border-box;
+	}
+
+	/* ===== MESSAGE CARD ===== */
+	.message-card {
+		background: rgba(30, 0, 20, 0.7);
+		backdrop-filter: blur(20px);
+		border: 1px solid rgba(255, 105, 180, 0.3);
+		border-radius: 2rem;
+		padding: 3rem 2.5rem;
+		max-width: 600px;
+		width: 100%;
+		text-align: center;
+		box-shadow:
+			0 0 60px rgba(255, 20, 147, 0.3),
+			0 0 120px rgba(255, 105, 180, 0.15),
+			inset 0 0 60px rgba(255, 20, 147, 0.05);
+		animation: cardIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+		max-height: 90vh;
+		overflow-y: auto;
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+	}
+	.message-card::-webkit-scrollbar {
+		display: none;
+	}
+	@keyframes cardIn {
+		from {
+			transform: scale(0.5) translateY(30px);
+			opacity: 0;
+		}
+		to {
+			transform: scale(1) translateY(0);
+			opacity: 1;
+		}
+	}
+
+	/* ===== HEARTS ROW ===== */
+	.hearts-row {
+		display: flex;
+		justify-content: center;
+		gap: 0.5rem;
+		margin-bottom: 1.5rem;
+	}
+	.float-heart {
+		font-size: 1.8rem;
+		display: inline-block;
+		animation: floatHeart 2s ease-in-out infinite;
+	}
+	@keyframes floatHeart {
+		0%,
+		100% {
+			transform: translateY(0) scale(1);
+		}
+		50% {
+			transform: translateY(-12px) scale(1.2);
+		}
+	}
+
+	.romantic-for {
+		font-size: 0.9rem;
+		color: #ffb6c1;
+		letter-spacing: 0.3em;
+		text-transform: uppercase;
+		margin: 0 0 0.5rem;
+		animation: glow-text 2s ease-in-out infinite;
+	}
+	.romantic-name {
+		font-size: 3.5rem;
+		font-weight: 900;
+		background: linear-gradient(135deg, #ff69b4, #ff1493, #ffb6c1, #ff69b4);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		margin: 0 0 1.5rem;
+		text-shadow: none;
+		animation: nameShine 3s linear infinite;
+		background-size: 200% auto;
+		font-family: Georgia, serif;
+	}
+	@keyframes nameShine {
+		0% {
+			background-position: 0% center;
+		}
+		100% {
+			background-position: 200% center;
+		}
+	}
+	.romantic-message {
+		color: #f9d0e0;
+		font-size: 1rem;
+		line-height: 1.8;
+		margin: 0 0 1.5rem;
+		font-style: italic;
+	}
+	.romantic-divider {
+		color: #ff69b4;
+		font-size: 1.2rem;
+		margin: 1.5rem 0;
+		animation: floatHeart 2.5s ease-in-out infinite;
+	}
+	@keyframes glow-text {
+		0%,
+		100% {
+			color: #ffb6c1;
+			text-shadow: 0 0 10px rgba(255, 182, 193, 0.5);
+		}
+		50% {
+			color: #ff69b4;
+			text-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
+		}
+	}
+
+	/* ===== BOUQUET ===== */
+	.bouquet-container {
+		margin-top: 1rem;
+	}
+	.bouquet-wrap {
+		position: relative;
+		display: inline-flex;
+		flex-direction: column;
+		align-items: center;
+		animation: bouquetSway 3s ease-in-out infinite;
+	}
+	@keyframes bouquetSway {
+		0%,
+		100% {
+			transform: rotate(-3deg);
+		}
+		50% {
+			transform: rotate(3deg);
+		}
+	}
+	.bouquet-flowers {
+		position: relative;
+		width: 120px;
+		height: 80px;
+	}
+	.b-flower {
+		position: absolute;
+		animation: petalSpin 3s ease-in-out infinite;
+	}
+	.b-f1 {
+		font-size: 2rem;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		animation-delay: 0s;
+	}
+	.b-f2 {
+		font-size: 1.8rem;
+		top: 10px;
+		left: 10px;
+		animation-delay: 0.2s;
+	}
+	.b-f3 {
+		font-size: 1.6rem;
+		top: 10px;
+		right: 10px;
+		animation-delay: 0.4s;
+	}
+	.b-f4 {
+		font-size: 1.7rem;
+		top: 30px;
+		left: 0;
+		animation-delay: 0.6s;
+	}
+	.b-f5 {
+		font-size: 1.9rem;
+		top: 30px;
+		right: 0;
+		animation-delay: 0.8s;
+	}
+	.b-f6 {
+		font-size: 1.5rem;
+		top: 50px;
+		left: 20px;
+		animation-delay: 1s;
+	}
+	.b-f7 {
+		font-size: 2rem;
+		top: 5px;
+		left: 35px;
+		animation-delay: 1.2s;
+	}
+	@keyframes petalSpin {
+		0%,
+		100% {
+			transform: scale(1) rotate(0deg);
+		}
+		50% {
+			transform: scale(1.15) rotate(10deg);
+		}
+	}
+	.thumbelina {
+		position: relative;
+		margin-top: -10px;
+		animation: thumbelinaFloat 2.5s ease-in-out infinite;
+	}
+	@keyframes thumbelinaFloat {
+		0%,
+		100% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(-8px);
+		}
+	}
+	.thumb-body {
+		text-align: center;
+		line-height: 1;
+	}
+	.thumb-head {
+		font-size: 1.8rem;
+	}
+	.thumb-dress {
+		font-size: 1.5rem;
+		margin-top: -5px;
+	}
+	.thumb-wings {
+		position: absolute;
+		top: 0;
+		right: -25px;
+		font-size: 1.2rem;
+		animation: wingFlap 0.6s ease-in-out infinite;
+	}
+	@keyframes wingFlap {
+		0%,
+		100% {
+			transform: scaleX(1) rotate(-10deg);
+		}
+		50% {
+			transform: scaleX(-1) rotate(10deg);
+		}
+	}
+	.bouquet-ribbon {
+		margin-top: 5px;
+		text-align: center;
+	}
+	.ribbon-body {
+		width: 30px;
+		height: 40px;
+		background: linear-gradient(180deg, #c2185b, #880e4f);
+		margin: 0 auto;
+		border-radius: 0 0 5px 5px;
+		position: relative;
+	}
+	.ribbon-body::before,
+	.ribbon-body::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		width: 30px;
+		height: 50px;
+		background: linear-gradient(135deg, #e91e63, #c2185b);
+		border-radius: 0 0 30px 30px;
+	}
+	.ribbon-body::before {
+		right: 20px;
+		transform: rotate(-15deg);
+	}
+	.ribbon-body::after {
+		left: 20px;
+		transform: rotate(15deg);
+	}
+	.ribbon-bow {
+		font-size: 1.8rem;
+		margin-top: -10px;
+		display: block;
+		animation: bowBounce 1.5s ease-in-out infinite;
+	}
+	@keyframes bowBounce {
+		0%,
+		100% {
+			transform: scale(1);
+		}
+		50% {
+			transform: scale(1.1) rotate(5deg);
+		}
+	}
+	.bouquet-label {
+		color: #ffb6c1;
+		font-size: 0.85rem;
+		margin-top: 1rem;
+		letter-spacing: 0.1em;
+		animation: glow-text 2s ease-in-out infinite;
 	}
 </style>
