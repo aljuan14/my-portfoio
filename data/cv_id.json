@@ -60,7 +60,11 @@
 		},
 		{
 			"category": "Management Tools",
-			"skills": ["Notion", "Git/GitHub", "Microsoft Office / Google Workspace"]
+			"skills": [
+				"Notion",
+				"Git/GitHub",
+				"Microsoft Office / Google Workspace"
+			]
 		},
 		{
 			"category": "AI & Web",
@@ -150,7 +154,7 @@
 		},
 		{
 			"name": "Warung Tante Landing Page",
-			"url": "https://www.warungtante.com/",
+			"url": "https://www.linkedin.com/posts/alfito-juanda_saya-baru-saja-menyelesaikan-sebuah-project-activity-7421261646377013248-rETU?utm_source=share&utm_medium=member_desktop&rcm=ACoAADM9dw8BBV8WUg5HlD6gyyctV7OEIuSgGNA",
 			"date": "",
 			"summary": "Halaman landing restoran untuk Warung Tante yang menyoroti menu terbaik dan suasana mereka.",
 			"highlights": [],
