@@ -445,14 +445,7 @@
 										>
 										{t.viewCv}
 									</a>
-									<!-- 💖 For You Button -->
-									<button
-										onclick={openRomantic}
-										class="for-you-btn px-6 py-3 rounded-xl font-bold text-sm flex items-center gap-2"
-									>
-										<span class="heart-icon">💖</span>
-										For You
-									</button>
+									<!-- 💖 For You Button (hidden) -->
 								</div>
 							</div>
 
@@ -915,71 +908,10 @@
 		background: rgba(16, 185, 129, 0.4);
 	}
 
-	/* ===== FOR YOU BUTTON ===== */
-	.for-you-btn {
-		background: linear-gradient(135deg, #ff69b4, #ff1493, #c2185b);
-		color: white;
-		border: none;
-		cursor: pointer;
-		position: relative;
-		overflow: hidden;
-		transition: all 0.3s ease;
-		box-shadow:
-			0 0 20px rgba(255, 105, 180, 0.4),
-			0 0 40px rgba(255, 20, 147, 0.2);
-		animation: pulse-pink 2s infinite;
-	}
-	.for-you-btn:hover {
-		transform: scale(1.08) translateY(-2px);
-		box-shadow:
-			0 0 30px rgba(255, 105, 180, 0.7),
-			0 0 60px rgba(255, 20, 147, 0.4);
-		background: linear-gradient(135deg, #ff85c2, #ff1493, #e91e8c);
-	}
-	.for-you-btn::before {
-		content: '';
-		position: absolute;
-		top: -50%;
-		left: -60%;
-		width: 40%;
-		height: 200%;
-		background: rgba(255, 255, 255, 0.3);
-		transform: skewX(-20deg);
-		animation: shimmer-btn 2.5s infinite;
-	}
-	.heart-icon {
-		display: inline-block;
-		animation: heartbeat 1.2s infinite;
-	}
-	@keyframes heartbeat {
-		0%,
-		100% {
-			transform: scale(1);
-		}
-		50% {
-			transform: scale(1.3);
-		}
-	}
-	@keyframes pulse-pink {
-		0%,
-		100% {
-			box-shadow:
-				0 0 20px rgba(255, 105, 180, 0.4),
-				0 0 40px rgba(255, 20, 147, 0.2);
-		}
-		50% {
-			box-shadow:
-				0 0 35px rgba(255, 105, 180, 0.7),
-				0 0 70px rgba(255, 20, 147, 0.4);
-		}
-	}
-	@keyframes shimmer-btn {
-		0% {
-			left: -60%;
-		}
-		100% {
-			left: 120%;
-		}
+	/* ===== HIDDEN ROMANTIC / FOR YOU UI ===== */
+	.romantic-overlay,
+	.romantic-content {
+		display: none !important;
 	}
 
 	/* ===== ROMANTIC OVERLAY ===== */
