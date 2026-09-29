@@ -7,14 +7,14 @@
 </svelte:head>
 
 <div
-	class="min-h-screen bg-gray-100 flex justify-center py-10 print:py-0 print:bg-white text-gray-900 selection:bg-blue-200"
+	class="min-h-screen bg-gray-100 flex justify-center sm:py-10 print:py-0 print:bg-white text-gray-900 selection:bg-blue-200"
 >
 	<!-- A4 Paper Container -->
 	<div
-		class="bg-white w-full max-w-[850px] shadow-xl print:shadow-none print:max-w-full print:w-full sm:rounded-lg print:rounded-none px-12 py-14 box-border relative overflow-hidden"
+		class="bg-white w-full max-w-[850px] shadow-xl print:shadow-none print:max-w-full print:w-full sm:rounded-lg print:rounded-none px-6 py-8 sm:px-12 sm:py-14 print:px-12 print:py-14 box-border relative overflow-hidden"
 	>
 		<!-- Print button (hidden when printing) -->
-		<div class="absolute top-6 right-6 print:hidden">
+		<div class="flex justify-end mb-6 sm:mb-0 sm:absolute sm:top-6 sm:right-6 print:hidden">
 			<button
 				onclick={() => window.print()}
 				class="px-4 py-2 bg-gray-900 text-white rounded-md text-sm font-semibold hover:bg-gray-700 transition-colors flex items-center gap-2 shadow-sm"
@@ -33,10 +33,10 @@
 
 		<!-- Header: Name and Label -->
 		<header class="mb-10 text-center sm:text-left border-b-2 border-gray-900 pb-6">
-			<h1 class="text-4xl font-black uppercase tracking-tight text-gray-900 mb-2">
+			<h1 class="text-3xl sm:text-4xl font-black uppercase tracking-tight text-gray-900 mb-2">
 				{cv.basics.name}
 			</h1>
-			<p class="text-xl font-semibold text-gray-600">{cv.basics.label}</p>
+			<p class="text-lg sm:text-xl font-semibold text-gray-600">{cv.basics.label}</p>
 		</header>
 
 		<!-- Main Two-Column Layout -->

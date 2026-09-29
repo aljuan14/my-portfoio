@@ -58,7 +58,7 @@
 
 <!-- Custom Cursor -->
 <div
-	class="hidden md:block fixed top-0 left-0 pointer-events-none z-[100] mix-blend-difference"
+	class="hidden pointer-fine:block fixed top-0 left-0 pointer-events-none z-[100] mix-blend-difference"
 	style="transform: translate({$coords.x}px, {$coords.y}px)"
 >
 	<div

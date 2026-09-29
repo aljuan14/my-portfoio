@@ -74,6 +74,11 @@
 	--sidebar-ring: oklch(0.552 0.016 285.938);
 }
 
+@theme {
+	/* Homepage switches to the 3-column dashboard hero */
+	--breakpoint-wide: 85rem;
+}
+
 @theme inline {
 	--radius-sm: calc(var(--radius) - 4px);
 	--radius-md: calc(var(--radius) - 2px);

@@ -154,7 +154,7 @@
 </script>
 
 <div
-	class="min-h-screen bg-[#070b14] text-zinc-300 font-mono flex flex-col relative selection:bg-emerald-500/30"
+	class="w-full min-h-screen bg-[#070b14] text-zinc-300 font-mono flex flex-col relative selection:bg-emerald-500/30"
 >
 	<!-- Top Bar -->
 	<div
@@ -165,12 +165,14 @@
 				>● {t.activities}</span
 			>
 		</div>
-		<div class="absolute left-1/2 -translate-x-1/2 flex items-center gap-2 text-zinc-400">
+		<div
+			class="absolute left-1/2 -translate-x-1/2 flex items-center gap-2 text-zinc-400 whitespace-nowrap"
+		>
 			<span>{formatDate(currentTime)}</span>
 			<span>{formatTime(currentTime)}</span>
 		</div>
 		<div class="flex items-center gap-4 text-zinc-400">
-			<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+			<svg class="hidden sm:block w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"
 				><path
 					stroke-linecap="round"
 					stroke-linejoin="round"
@@ -178,7 +180,7 @@
 					d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
 				/></svg
 			>
-			<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+			<svg class="hidden sm:block w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"
 				><path
 					stroke-linecap="round"
 					stroke-linejoin="round"
@@ -200,7 +202,7 @@
 		</div>
 	</div>
 
-	<div class="flex-1 flex relative p-4 gap-4 overflow-hidden">
+	<div class="flex-1 flex relative p-3 sm:p-4 pb-24 md:pb-4 gap-4 overflow-x-clip">
 		<!-- Background Glow -->
 		<div
 			class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-emerald-900/20 blur-[120px] rounded-full pointer-events-none"
@@ -208,7 +210,7 @@
 
 		<!-- Left Sidebar (Icons) -->
 		<div
-			class="w-14 bg-[#0d131f]/80 backdrop-blur-md rounded-2xl border border-white/5 flex flex-col items-center py-4 gap-6 z-50 sticky top-12 h-[calc(100vh-6rem)]"
+			class="fixed bottom-3 left-1/2 -translate-x-1/2 h-14 px-3 flex flex-row items-center gap-2 bg-[#0d131f]/90 backdrop-blur-md rounded-2xl border border-white/10 z-50 shadow-2xl md:sticky md:top-12 md:bottom-auto md:left-auto md:translate-x-0 md:w-14 md:h-[calc(100vh-4rem)] md:px-0 md:py-4 md:flex-col md:gap-6 md:shrink-0 md:bg-[#0d131f]/80 md:border-white/5 md:shadow-none"
 		>
 			<!-- Home -->
 			<a
@@ -285,10 +287,10 @@
 					/></svg
 				>
 			</a>
-			<div class="mt-auto"></div>
+			<div class="hidden md:block mt-auto"></div>
 			<button
 				onclick={() => (lang = lang === 'en' ? 'id' : 'en')}
-				class="p-2 w-12 h-12 flex items-center justify-center bg-emerald-500/20 border-2 border-emerald-500/50 rounded-xl text-emerald-400 hover:bg-emerald-500/30 hover:border-emerald-400 hover:text-emerald-300 hover:shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-all mb-2 font-black text-sm shadow-[0_0_10px_rgba(16,185,129,0.2)]"
+				class="p-2 w-10 h-10 md:w-12 md:h-12 ml-1 md:ml-0 flex items-center justify-center bg-emerald-500/20 border-2 border-emerald-500/50 rounded-xl text-emerald-400 hover:bg-emerald-500/30 hover:border-emerald-400 hover:text-emerald-300 hover:shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-all md:mb-2 font-black text-sm shadow-[0_0_10px_rgba(16,185,129,0.2)]"
 				title="Toggle Language"
 			>
 				{lang.toUpperCase()}
@@ -296,15 +298,15 @@
 		</div>
 
 		<!-- Main Layout -->
-		<div
-			class="flex-1 flex flex-col w-full h-[calc(100vh-2rem)] overflow-y-auto overflow-x-hidden scroll-smooth"
-		>
+		<div class="flex-1 flex flex-col w-full min-w-0">
 			<!-- Dashboard Grid -->
 			<div
-				class="flex flex-col lg:flex-row gap-6 w-full px-2 lg:px-4 py-4 min-h-[calc(100vh-3rem)] items-center"
+				class="flex flex-col wide:flex-row gap-4 sm:gap-6 w-full sm:px-2 wide:px-4 py-1 sm:py-4 wide:min-h-[calc(100vh-4rem)] items-stretch wide:items-center"
 			>
 				<!-- Left side widgets -->
-				<div class="w-full lg:w-64 flex flex-col gap-6">
+				<div
+					class="hidden sm:grid sm:grid-cols-2 wide:flex wide:flex-col wide:w-64 wide:shrink-0 gap-6"
+				>
 					<!-- Deploy Widget -->
 					<div class="bg-[#0d131f]/60 backdrop-blur-md rounded-2xl border border-white/5 p-4 z-10">
 						<div class="flex items-center gap-2 text-xs font-bold text-zinc-400 mb-4 uppercase">
@@ -335,7 +337,7 @@
 
 					<!-- Model Widget -->
 					<div
-						class="bg-[#0d131f]/60 backdrop-blur-md rounded-2xl border border-white/5 p-4 z-10 mt-auto"
+						class="bg-[#0d131f]/60 backdrop-blur-md rounded-2xl border border-white/5 p-4 z-10 wide:mt-auto"
 					>
 						<div class="flex items-center gap-2 text-xs font-bold text-zinc-400 mb-4">
 							<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
@@ -355,27 +357,29 @@
 				</div>
 
 				<!-- Center Profile Card -->
-				<div class="flex-1 flex items-center justify-center relative z-10 w-full">
+				<div
+					class="order-first wide:order-none flex-1 min-w-0 flex items-center justify-center relative z-10 w-full"
+				>
 					<!-- Pulsing green dot in background -->
 					<div
 						class="absolute right-0 top-1/2 w-4 h-4 rounded-full bg-emerald-500/20 shadow-[0_0_15px_rgba(16,185,129,0.5)] border border-emerald-500/50"
 					></div>
 
 					<div
-						class="w-full bg-[#121820]/90 backdrop-blur-xl border border-white/10 rounded-3xl p-8 lg:p-12 shadow-2xl relative overflow-hidden"
+						class="w-full bg-[#121820]/90 backdrop-blur-xl border border-white/10 rounded-3xl p-6 sm:p-8 lg:p-12 shadow-2xl relative overflow-hidden"
 					>
-						<div class="flex flex-col lg:flex-row gap-12">
+						<div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
 							<!-- Content -->
 							<div class="flex-1 flex flex-col justify-center">
 								<div
-									class="flex items-center gap-2 text-xs font-bold text-emerald-400 mb-6 font-mono tracking-widest uppercase"
+									class="flex items-center gap-2 text-[10px] sm:text-xs font-bold text-emerald-400 mb-6 font-mono tracking-widest uppercase"
 								>
-									<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+									<span class="w-2 h-2 shrink-0 rounded-full bg-emerald-500 animate-pulse"></span>
 									{t.welcome}
 									{basics.name.toUpperCase()} OS
 								</div>
 
-								<h1 class="text-4xl lg:text-5xl font-black text-white leading-[1.1] mb-6 font-sans">
+								<h1 class="text-4xl sm:text-5xl font-black text-white leading-[1.1] mb-6 font-sans">
 									{basics.name.toUpperCase()}
 								</h1>
 
@@ -390,7 +394,7 @@
 									{basics.shortSummary}
 								</p>
 
-								<div class="flex items-center gap-2 text-zinc-500 text-sm mb-10">
+								<div class="flex items-center gap-2 text-zinc-500 text-sm mb-8 lg:mb-10">
 									<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
 										><path
 											stroke-linecap="round"
@@ -407,17 +411,17 @@
 									Indonesia
 								</div>
 
-								<div class="flex flex-wrap gap-4">
+								<div class="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4">
 									<a
 										href="#projects"
-										class="px-6 py-3 bg-emerald-400 text-[#0d131f] rounded-xl font-bold text-sm hover:bg-emerald-300 transition-colors flex items-center gap-2"
+										class="px-6 py-3 bg-emerald-400 text-[#0d131f] rounded-xl font-bold text-sm hover:bg-emerald-300 transition-colors flex items-center justify-center gap-2"
 									>
 										<span>&rarr;</span>
 										{t.viewWork}
 									</a>
 									<a
 										href="#contact"
-										class="px-6 py-3 bg-white/5 border border-white/10 text-white rounded-xl font-bold text-sm hover:bg-white/10 transition-colors flex items-center gap-2"
+										class="px-6 py-3 bg-white/5 border border-white/10 text-white rounded-xl font-bold text-sm hover:bg-white/10 transition-colors flex items-center justify-center gap-2"
 									>
 										<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
 											><path
@@ -433,7 +437,7 @@
 										href="/cv.pdf"
 										target="_blank"
 										rel="noopener noreferrer"
-										class="px-6 py-3 bg-transparent border border-emerald-500/30 text-emerald-400 rounded-xl font-bold text-sm hover:bg-emerald-500/10 transition-colors flex items-center gap-2"
+										class="px-6 py-3 bg-transparent border border-emerald-500/30 text-emerald-400 rounded-xl font-bold text-sm hover:bg-emerald-500/10 transition-colors flex items-center justify-center gap-2"
 									>
 										<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
 											><path
@@ -450,14 +454,14 @@
 							</div>
 
 							<!-- Profile Picture -->
-							<div class="hidden lg:flex flex-col justify-center items-center">
+							<div class="order-first lg:order-none flex flex-col justify-center items-center">
 								<div class="relative p-2 bg-white/5 border border-white/10 rounded-3xl shadow-2xl">
 									<!-- Neon glow effect -->
 									<div
 										class="absolute inset-0 rounded-3xl shadow-[0_0_30px_rgba(16,185,129,0.15)] pointer-events-none"
 									></div>
 									<div
-										class="w-64 h-64 bg-gradient-to-tr from-[#0d131f] via-[#1a2c3a] to-emerald-900/30 rounded-2xl overflow-hidden relative border border-white/5"
+										class="w-44 h-44 sm:w-56 sm:h-56 lg:w-64 lg:h-64 bg-gradient-to-tr from-[#0d131f] via-[#1a2c3a] to-emerald-900/30 rounded-2xl overflow-hidden relative border border-white/5"
 									>
 										<img
 											src="/images/alfito.png"
@@ -465,7 +469,7 @@
 											class="w-full h-full object-cover object-center"
 										/>
 										<div
-											class="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-1.5 bg-[#121820]/90 backdrop-blur-md rounded-full border border-white/10 flex items-center gap-2 whitespace-nowrap"
+											class="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 px-3 sm:px-4 py-1.5 bg-[#121820]/90 backdrop-blur-md rounded-full border border-white/10 flex items-center gap-2 whitespace-nowrap"
 										>
 											<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
 											<span class="text-xs font-bold text-zinc-300">{t.work}</span>
@@ -476,8 +480,10 @@
 						</div>
 
 						<!-- Skills Footer -->
-						<div class="mt-12 pt-6 border-t border-white/10">
-							<div class="flex flex-wrap gap-x-6 gap-y-3 text-xs font-mono text-zinc-400">
+						<div class="mt-10 lg:mt-12 pt-6 border-t border-white/10">
+							<div
+								class="flex flex-wrap gap-x-4 sm:gap-x-6 gap-y-3 text-xs font-mono text-zinc-400"
+							>
 								{#each skills.slice(0, 9) as skill, i}
 									<span class="hover:text-emerald-400 transition-colors cursor-default"
 										>{skill}</span
@@ -492,10 +498,12 @@
 				</div>
 
 				<!-- Right side widgets -->
-				<div class="w-full lg:w-72 flex flex-col gap-6">
+				<div
+					class="hidden sm:grid sm:grid-cols-2 wide:flex wide:flex-col wide:w-72 wide:shrink-0 gap-6"
+				>
 					<!-- Threat Feed -->
 					<div
-						class="bg-[#0d131f]/60 backdrop-blur-md rounded-2xl border border-white/5 p-4 z-10 flex-1 max-h-[300px]"
+						class="bg-[#0d131f]/60 backdrop-blur-md rounded-2xl border border-white/5 p-4 z-10 wide:flex-1 wide:max-h-[300px] min-w-0"
 					>
 						<div class="flex items-center gap-2 text-xs font-bold text-zinc-400 mb-4 uppercase">
 							<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
@@ -527,7 +535,7 @@
 
 					<!-- Terminal Widget -->
 					<div
-						class="bg-[#0d131f]/60 backdrop-blur-md rounded-2xl border border-white/5 p-4 z-10 mt-auto"
+						class="bg-[#0d131f]/60 backdrop-blur-md rounded-2xl border border-white/5 p-4 z-10 wide:mt-auto"
 					>
 						<div class="flex items-center gap-2 text-[10px] font-bold text-zinc-500 mb-3 font-mono">
 							<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
@@ -548,35 +556,39 @@
 
 			<!-- NEW SECTIONS: PORTFOLIO CONTENT -->
 			<div
-				class="max-w-[1400px] w-full mx-auto px-4 lg:px-12 pb-32 pt-20 flex flex-col gap-32 relative z-10"
+				class="max-w-[1400px] w-full mx-auto px-0 sm:px-4 lg:px-12 pb-8 lg:pb-32 pt-16 lg:pt-20 flex flex-col gap-20 lg:gap-32 relative z-10"
 			>
 				<!-- MY WORK SECTION -->
-				<section id="projects" class="flex flex-col gap-10">
-					<div class="flex items-center gap-6">
-						<h2 class="text-3xl font-black text-white font-sans uppercase tracking-tight">
+				<section id="projects" class="flex flex-col gap-8 sm:gap-10 scroll-mt-12">
+					<div class="flex items-center gap-4 sm:gap-6">
+						<h2
+							class="text-2xl sm:text-3xl font-black text-white font-sans uppercase tracking-tight shrink-0"
+						>
 							{t.myWork}
 						</h2>
 						<div class="h-[1px] flex-1 bg-white/10"></div>
 					</div>
 
-					<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+					<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
 						{#each cv.projects.slice(0, 4) as project}
 							<div
-								class="bg-[#121820]/80 backdrop-blur-sm border border-white/10 rounded-3xl p-8 flex flex-col hover:border-emerald-500/50 transition-colors group relative overflow-hidden shadow-xl"
+								class="bg-[#121820]/80 backdrop-blur-sm border border-white/10 rounded-3xl p-6 sm:p-8 flex flex-col hover:border-emerald-500/50 transition-colors group relative overflow-hidden shadow-xl"
 							>
 								<div
 									class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
 								></div>
 
-								<div class="flex justify-between items-start mb-6 relative z-10">
-									<h3 class="text-3xl font-black text-white font-sans tracking-wide uppercase">
+								<div class="flex justify-between items-start gap-4 mb-6 relative z-10">
+									<h3
+										class="text-2xl sm:text-3xl font-black text-white font-sans tracking-wide uppercase min-w-0 break-words"
+									>
 										{project.name}
 									</h3>
 									{#if project.url}
 										<a
 											href={project.url.startsWith('http') ? project.url : 'https://' + project.url}
 											target="_blank"
-											class="px-4 py-2 bg-white/5 border border-white/10 hover:bg-emerald-500/20 hover:border-emerald-500/50 hover:text-emerald-400 rounded-full text-xs font-bold text-white flex items-center gap-2 transition-all"
+											class="shrink-0 px-4 py-2 bg-white/5 border border-white/10 hover:bg-emerald-500/20 hover:border-emerald-500/50 hover:text-emerald-400 rounded-full text-xs font-bold text-white flex items-center gap-2 transition-all"
 										>
 											{t.visit}
 											<svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"
@@ -599,7 +611,7 @@
 								<p
 									class="text-sm lg:text-base text-zinc-400 mb-6 flex-1 relative z-10 leading-relaxed"
 								>
-									{project.summary.split('-').slice(1).join('-').trim() || project.summary}
+									{project.summary.split('-').slice(1).join('-').trim()}
 								</p>
 
 								<ul class="flex flex-col gap-3 mb-8 relative z-10">
@@ -613,10 +625,10 @@
 
 								<div class="h-[1px] w-full bg-white/10 mb-6 relative z-10"></div>
 
-								<div class="flex flex-wrap gap-3 relative z-10">
+								<div class="flex flex-wrap gap-2 sm:gap-3 relative z-10">
 									{#each project.stack.split(',') as tech}
 										<span
-											class="px-4 py-1.5 bg-[#0d131f] border border-white/10 rounded-full text-xs font-mono text-white group-hover:border-emerald-500/30 group-hover:text-emerald-400 transition-colors"
+											class="px-3 sm:px-4 py-1.5 bg-[#0d131f] border border-white/10 rounded-full text-xs font-mono text-white group-hover:border-emerald-500/30 group-hover:text-emerald-400 transition-colors"
 										>
 											{tech.trim()}
 										</span>
@@ -628,16 +640,18 @@
 				</section>
 
 				<!-- OTHER COOL STUFF -->
-				<section class="flex flex-col gap-10">
-					<div class="flex items-center gap-6">
+				<section class="flex flex-col gap-8 sm:gap-10">
+					<div class="flex items-center gap-4 sm:gap-6">
 						<div class="h-[1px] flex-1 bg-white/10"></div>
-						<h2 class="text-3xl font-black text-white font-sans uppercase tracking-tight">
+						<h2
+							class="text-2xl sm:text-3xl font-black text-white font-sans uppercase tracking-tight shrink-0"
+						>
 							{t.otherCool}
 						</h2>
 						<div class="h-[1px] flex-1 bg-white/10"></div>
 					</div>
 
-					<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+					<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
 						{#each cv.projects.slice(4) as project}
 							<div
 								class="bg-[#121820]/80 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col hover:border-emerald-500/50 hover:shadow-[0_0_20px_rgba(16,185,129,0.1)] transition-all group relative overflow-hidden"
@@ -659,14 +673,16 @@
 									>
 								</div>
 								<div
-									class="flex items-center justify-between mb-3 group-hover:text-emerald-400 transition-colors"
+									class="flex items-center justify-between gap-3 mb-3 group-hover:text-emerald-400 transition-colors"
 								>
-									<h3 class="text-xl font-black text-white font-sans uppercase">{project.name}</h3>
+									<h3 class="text-xl font-black text-white font-sans uppercase min-w-0 break-words">
+										{project.name}
+									</h3>
 									{#if project.url}
 										<a
 											href={project.url}
 											target="_blank"
-											class="p-2 bg-white/5 hover:bg-emerald-500/20 rounded-full transition-colors"
+											class="shrink-0 p-2 bg-white/5 hover:bg-emerald-500/20 rounded-full transition-colors"
 											title={t.visit}
 										>
 											<svg
@@ -699,9 +715,11 @@
 				</section>
 
 				<!-- JOURNEY & SKILLS -->
-				<section class="flex flex-col gap-10">
-					<div class="flex items-center gap-6">
-						<h2 class="text-3xl font-black text-white font-sans uppercase tracking-tight">
+				<section class="flex flex-col gap-8 sm:gap-10">
+					<div class="flex items-center gap-4 sm:gap-6">
+						<h2
+							class="text-2xl sm:text-3xl font-black text-white font-sans uppercase tracking-tight shrink-0"
+						>
 							{t.journey}
 						</h2>
 						<div class="h-[1px] flex-1 bg-white/10"></div>
@@ -711,23 +729,27 @@
 						<!-- Organization Experience -->
 						<div class="flex-1 flex flex-col gap-8">
 							<div class="flex items-center gap-3 mb-2">
-								<span class="w-4 h-4 rounded-full bg-blue-500 animate-pulse"></span>
-								<h3 class="text-2xl font-black text-white font-sans uppercase tracking-wide">
+								<span class="w-4 h-4 shrink-0 rounded-full bg-blue-500 animate-pulse"></span>
+								<h3
+									class="text-xl sm:text-2xl font-black text-white font-sans uppercase tracking-wide"
+								>
 									{t.orgExp}
 								</h3>
 							</div>
 
-							<div class="flex flex-col gap-8 border-l-2 border-white/10 pl-8 relative ml-2">
+							<div
+								class="flex flex-col gap-6 sm:gap-8 border-l-2 border-white/10 pl-6 sm:pl-8 relative ml-2"
+							>
 								{#each cv.experiences_in_organization as exp}
 									<div class="relative">
 										<div
-											class="absolute -left-[41px] top-4 w-4 h-4 rounded-full bg-[#070b14] border-2 border-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.5)]"
+											class="absolute -left-[33px] sm:-left-[41px] top-4 w-4 h-4 rounded-full bg-[#070b14] border-2 border-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.5)]"
 										></div>
 										<div
-											class="bg-[#121820]/80 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-white/20 hover:bg-white/5 transition-colors"
+											class="bg-[#121820]/80 backdrop-blur-sm border border-white/10 rounded-2xl p-5 sm:p-6 hover:border-white/20 hover:bg-white/5 transition-colors"
 										>
 											<h4
-												class="text-xl font-black text-white font-sans uppercase mb-2 tracking-wide"
+												class="text-lg sm:text-xl font-black text-white font-sans uppercase mb-2 tracking-wide break-words"
 											>
 												{exp.organization}
 											</h4>
@@ -746,8 +768,10 @@
 						<!-- Technical Arsenal -->
 						<div class="flex-1 flex flex-col gap-8">
 							<div class="flex items-center gap-3 mb-2">
-								<span class="w-4 h-4 rounded-full bg-purple-500 animate-pulse"></span>
-								<h3 class="text-2xl font-black text-white font-sans uppercase tracking-wide">
+								<span class="w-4 h-4 shrink-0 rounded-full bg-purple-500 animate-pulse"></span>
+								<h3
+									class="text-xl sm:text-2xl font-black text-white font-sans uppercase tracking-wide"
+								>
 									{t.techArsenal}
 								</h3>
 							</div>
@@ -755,17 +779,17 @@
 							<div class="flex flex-col gap-6">
 								{#each cv.skillsByCategory || [] as cat}
 									<div
-										class="bg-[#121820]/80 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-colors"
+										class="bg-[#121820]/80 backdrop-blur-sm border border-white/10 rounded-2xl p-5 sm:p-6 hover:border-white/20 transition-colors"
 									>
 										<h4
 											class="text-sm font-black text-white font-sans uppercase mb-5 tracking-widest border-b border-white/10 pb-3"
 										>
 											{cat.category}
 										</h4>
-										<div class="flex flex-wrap gap-3">
+										<div class="flex flex-wrap gap-2 sm:gap-3">
 											{#each cat.skills as skill}
 												<span
-													class="px-4 py-2 bg-emerald-500/10 border border-emerald-500/30 rounded-xl text-xs font-mono text-emerald-400 hover:bg-emerald-500/20 transition-colors cursor-default"
+													class="px-3 sm:px-4 py-2 bg-emerald-500/10 border border-emerald-500/30 rounded-xl text-xs font-mono text-emerald-400 hover:bg-emerald-500/20 transition-colors cursor-default"
 												>
 													{skill}
 												</span>
@@ -893,18 +917,18 @@
 		height: 100% !important;
 	}
 
-	/* Custom scrollbar for the main content area */
-	.overflow-y-auto::-webkit-scrollbar {
+	/* Custom page scrollbar */
+	:global(html)::-webkit-scrollbar {
 		width: 8px;
 	}
-	.overflow-y-auto::-webkit-scrollbar-track {
+	:global(html)::-webkit-scrollbar-track {
 		background: rgba(0, 0, 0, 0.2);
 	}
-	.overflow-y-auto::-webkit-scrollbar-thumb {
+	:global(html)::-webkit-scrollbar-thumb {
 		background: rgba(16, 185, 129, 0.2);
 		border-radius: 10px;
 	}
-	.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+	:global(html)::-webkit-scrollbar-thumb:hover {
 		background: rgba(16, 185, 129, 0.4);
 	}
 
