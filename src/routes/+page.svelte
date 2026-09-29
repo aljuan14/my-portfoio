@@ -663,10 +663,10 @@
 						<div class="font-mono text-[10px] leading-relaxed">
 							<div class="text-white mb-1">$ git log --oneline -4</div>
 							<div class="text-zinc-400">
-								<span class="text-emerald-400">1a2c9f</span> feat: deploy via nginx + pm2<br />
-								<span class="text-emerald-400">8b41de</span> fix: open-graph dinamis<br />
-								<span class="text-emerald-400">c77a02</span> perf: drizzle atomic tx<br />
-								<span class="text-emerald-400">e90b15</span> init: alfito os
+								<span class="text-emerald-400">d4f1a7</span> feat(jivara): yolo alerts<br />
+								<span class="text-emerald-400">9c2e58</span> feat(medisync): ai triage<br />
+								<span class="text-emerald-400">71b0c3</span> feat(pos): geo check-in<br />
+								<span class="text-emerald-400">3a8e92</span> paper: facenet 94.5% acc
 							</div>
 						</div>
 					</div>
