@@ -1,6 +1,7 @@
 <script>
 	let { data } = $props();
 	import { resolve } from '$app/paths';
+	import Seo from '$lib/components/Seo.svelte';
 
 	function formatDate(date) {
 		return new Date(date).toLocaleDateString('en-US', {
@@ -11,11 +12,22 @@
 	}
 </script>
 
-<svelte:head>
-	<title>{data.meta.title} - Alfito Juanda</title>
-	<meta property="og:type" content="article" />
-	<meta property="og:title" content={data.meta.title} />
-</svelte:head>
+<Seo
+	title="{data.meta.title} — Alfito Juanda"
+	description={data.meta.description ?? ''}
+	type="article"
+	image={data.meta.image ?? '/og-image.png'}
+	publishedTime={data.meta.date}
+	tags={data.meta.tags ?? []}
+	jsonLd={{
+		'@context': 'https://schema.org',
+		'@type': 'BlogPosting',
+		headline: data.meta.title,
+		description: data.meta.description,
+		datePublished: data.meta.date,
+		author: { '@type': 'Person', name: 'Alfito Juanda' }
+	}}
+/>
 
 <article class="relative pt-16 pb-32 px-6 w-full min-h-screen bg-zinc-950">
 	<div class="max-w-4xl mx-auto relative z-10">
@@ -99,7 +111,7 @@
 			<!-- Back to Blog -->
 			<div class="text-center">
 				<a
-					href={resolve('/?open=blog')}
+					href={resolve('/blog')}
 					class="inline-flex items-center text-sm font-bold text-white uppercase tracking-widest hover:text-zinc-400 transition-colors"
 				>
 					<span class="mr-2">←</span> Back to Blog

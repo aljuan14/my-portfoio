@@ -6,8 +6,10 @@ export async function GET({ url }) {
 
 	// Static pages
 	const staticPages = [
-		{ url: '', priority: '1.0', changefreq: 'weekly' },
-		{ url: '/blog', priority: '0.8', changefreq: 'daily' }
+		{ url: '/', priority: '1.0', changefreq: 'weekly' },
+		{ url: '/resume', priority: '0.7', changefreq: 'monthly' },
+		// The blog index is noindex while it is empty, so only list it once there are posts
+		...(posts.length ? [{ url: '/blog', priority: '0.8', changefreq: 'weekly' }] : [])
 	];
 
 	// Dynamic blog posts

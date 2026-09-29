@@ -1,10 +1,13 @@
 <script>
 	import cv from '$data/cv.json';
+	import Seo from '$lib/components/Seo.svelte';
 </script>
 
-<svelte:head>
-	<title>{cv.basics.name} - Resume</title>
-</svelte:head>
+<Seo
+	title="Resume — {cv.basics.name}"
+	description="Resume of {cv.basics.name}, {cv.basics
+		.label}: projects, skills, education, and achievements."
+/>
 
 <div
 	class="min-h-screen bg-gray-100 flex justify-center sm:py-10 print:py-0 print:bg-white text-gray-900 selection:bg-blue-200"

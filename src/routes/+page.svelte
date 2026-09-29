@@ -2,11 +2,27 @@
 	import cvEn from '$data/cv_en.json';
 	import cvId from '$data/cv_id.json';
 	import { onMount } from 'svelte';
+	import Seo from '$lib/components/Seo.svelte';
+	import { resolve } from '$app/paths';
+	import { page } from '$app/state';
+
+	// Keys only (lazy glob), so the dock can link to the blog once posts exist
+	const hasPosts = Object.keys(import.meta.glob('/src/lib/content/posts/*.md')).length > 0;
+
+	const seoTitle = `${cvEn.basics.name} — ${cvEn.basics.label}`;
+	// Kept under ~160 characters so search results show it in full
+	const seoDescription =
+		'AI & Fullstack Web Engineer in Yogyakarta, Indonesia, building machine learning, computer vision, and web apps with Python, FastAPI, Next.js, and Supabase.';
+	const socialUrls = cvEn.socials.map((s) => s.url);
 
 	let lang = $state('en');
 	let cv = $derived(lang === 'en' ? cvEn : cvId);
 	let basics = $derived(cv.basics);
 	let skills = $derived(cv.skills);
+
+	$effect(() => {
+		document.documentElement.lang = lang;
+	});
 
 	const t = $derived(
 		lang === 'en'
@@ -25,7 +41,13 @@
 					builtWith: 'Built with',
 					threatFeed: 'THREAT FEED - SECURE',
 					cloudDeploy: 'CLOUD DEPLOY',
-					activities: 'Activities'
+					activities: 'Activities',
+					contactTitle: 'GET IN TOUCH',
+					contactLead:
+						'Open to internships, freelance projects, and collaboration on AI or fullstack web work. The fastest way to reach me is email — I usually reply within a day or two.',
+					sendEmail: 'Send an Email',
+					atsCv: 'ATS CV (PDF)',
+					blog: 'Blog'
 				}
 			: {
 					welcome: 'SELAMAT DATANG DI',
@@ -42,7 +64,13 @@
 					builtWith: 'Dibuat dengan',
 					threatFeed: 'THREAT FEED - SECURE',
 					cloudDeploy: 'CLOUD DEPLOY',
-					activities: 'Aktivitas'
+					activities: 'Aktivitas',
+					contactTitle: 'HUBUNGI SAYA',
+					contactLead:
+						'Terbuka untuk magang, proyek freelance, dan kolaborasi di bidang AI maupun fullstack web. Cara tercepat menghubungi saya adalah lewat email — biasanya saya balas dalam satu atau dua hari.',
+					sendEmail: 'Kirim Email',
+					atsCv: 'CV ATS (PDF)',
+					blog: 'Blog'
 				}
 	);
 
@@ -153,6 +181,32 @@
 	};
 </script>
 
+<Seo
+	title={seoTitle}
+	description={seoDescription}
+	jsonLd={{
+		'@context': 'https://schema.org',
+		'@type': 'Person',
+		name: cvEn.basics.name,
+		jobTitle: cvEn.basics.label,
+		description: cvEn.basics.shortSummary,
+		url: page.url.origin,
+		image: `${page.url.origin}/images/alfito.png`,
+		email: `mailto:${cvEn.basics.email}`,
+		address: {
+			'@type': 'PostalAddress',
+			addressRegion: 'Special Region of Yogyakarta',
+			addressCountry: cvEn.basics.location.countryCode
+		},
+		alumniOf: cvEn.education.map((e) => ({
+			'@type': 'EducationalOrganization',
+			name: e.institution
+		})),
+		knowsAbout: cvEn.skills,
+		sameAs: socialUrls
+	}}
+/>
+
 <div
 	class="w-full min-h-screen bg-[#070b14] text-zinc-300 font-mono flex flex-col relative selection:bg-emerald-500/30"
 >
@@ -210,7 +264,7 @@
 
 		<!-- Left Sidebar (Icons) -->
 		<div
-			class="fixed bottom-3 left-1/2 -translate-x-1/2 h-14 px-3 flex flex-row items-center gap-2 bg-[#0d131f]/90 backdrop-blur-md rounded-2xl border border-white/10 z-50 shadow-2xl md:sticky md:top-12 md:bottom-auto md:left-auto md:translate-x-0 md:w-14 md:h-[calc(100vh-4rem)] md:px-0 md:py-4 md:flex-col md:gap-6 md:shrink-0 md:bg-[#0d131f]/80 md:border-white/5 md:shadow-none"
+			class="fixed bottom-3 left-1/2 -translate-x-1/2 h-14 px-2 sm:px-3 flex flex-row items-center gap-1 sm:gap-2 bg-[#0d131f]/90 backdrop-blur-md rounded-2xl border border-white/10 z-50 shadow-2xl md:sticky md:top-12 md:bottom-auto md:left-auto md:translate-x-0 md:w-14 md:h-[calc(100vh-4rem)] md:px-0 md:py-4 md:flex-col md:gap-6 md:shrink-0 md:bg-[#0d131f]/80 md:border-white/5 md:shadow-none"
 		>
 			<!-- Home -->
 			<a
@@ -287,6 +341,43 @@
 					/></svg
 				>
 			</a>
+			<!-- ATS CV (static PDF, follows the selected language) -->
+			<!-- eslint-disable svelte/no-navigation-without-resolve -->
+			<a
+				href="/cv-ats-{lang}.pdf"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="p-2 text-zinc-500 hover:text-zinc-300 transition-colors"
+				title={t.atsCv}
+				aria-label={t.atsCv}
+			>
+				<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+					><path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+					/></svg
+				>
+			</a>
+			<!-- eslint-enable svelte/no-navigation-without-resolve -->
+			{#if hasPosts}
+				<!-- Blog -->
+				<a
+					href={resolve('/blog')}
+					class="p-2 text-zinc-500 hover:text-zinc-300 transition-colors"
+					title={t.blog}
+				>
+					<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+						><path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+						/></svg
+					>
+				</a>
+			{/if}
 			<div class="hidden md:block mt-auto"></div>
 			<button
 				onclick={() => (lang = lang === 'en' ? 'id' : 'en')}
@@ -461,7 +552,7 @@
 										class="absolute inset-0 rounded-3xl shadow-[0_0_30px_rgba(16,185,129,0.15)] pointer-events-none"
 									></div>
 									<div
-										class="w-44 h-44 sm:w-56 sm:h-56 lg:w-64 lg:h-64 bg-gradient-to-tr from-[#0d131f] via-[#1a2c3a] to-emerald-900/30 rounded-2xl overflow-hidden relative border border-white/5"
+										class="w-52 h-52 sm:w-56 sm:h-56 lg:w-64 lg:h-64 bg-gradient-to-tr from-[#0d131f] via-[#1a2c3a] to-emerald-900/30 rounded-2xl overflow-hidden relative border border-white/5"
 									>
 										<img
 											src="/images/alfito.png"
@@ -798,6 +889,76 @@
 									</div>
 								{/each}
 							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- CONTACT -->
+				<section id="contact" class="flex flex-col gap-8 sm:gap-10 scroll-mt-12">
+					<div class="flex items-center gap-4 sm:gap-6">
+						<h2
+							class="text-2xl sm:text-3xl font-black text-white font-sans uppercase tracking-tight shrink-0"
+						>
+							{t.contactTitle}
+						</h2>
+						<div class="h-[1px] flex-1 bg-white/10"></div>
+					</div>
+
+					<div
+						class="bg-[#121820]/80 backdrop-blur-sm border border-white/10 rounded-3xl p-6 sm:p-8 lg:p-12 flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-12 shadow-xl"
+					>
+						<div class="flex-1 flex flex-col gap-6">
+							<p class="text-sm lg:text-base text-zinc-400 leading-relaxed max-w-xl">
+								{t.contactLead}
+							</p>
+							<a
+								href="mailto:{basics.email}"
+								class="w-full sm:w-fit px-6 py-3 bg-emerald-400 text-[#0d131f] rounded-xl font-bold text-sm hover:bg-emerald-300 transition-colors flex items-center justify-center gap-2"
+							>
+								<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+									><path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+									/></svg
+								>
+								{t.sendEmail}
+							</a>
+						</div>
+
+						<div class="flex flex-col gap-3 lg:w-96">
+							<a
+								href="mailto:{basics.email}"
+								class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4 px-5 py-4 bg-[#0d131f] border border-white/10 rounded-2xl hover:border-emerald-500/50 transition-colors group min-w-0"
+							>
+								<span class="text-xs font-bold uppercase tracking-widest text-zinc-500 shrink-0"
+									>Email</span
+								>
+								<span
+									class="text-sm text-white group-hover:text-emerald-400 transition-colors truncate"
+									>{basics.email}</span
+								>
+							</a>
+							{#each cv.socials as social (social.network)}
+								<!-- External profile URL, not an app route -->
+								<!-- eslint-disable svelte/no-navigation-without-resolve -->
+								<a
+									href={social.url}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4 px-5 py-4 bg-[#0d131f] border border-white/10 rounded-2xl hover:border-emerald-500/50 transition-colors group min-w-0"
+								>
+									<span class="text-xs font-bold uppercase tracking-widest text-zinc-500 shrink-0"
+										>{social.network}</span
+									>
+									<span
+										class="text-sm text-white group-hover:text-emerald-400 transition-colors truncate"
+										>{social.username} ↗</span
+									>
+								</a>
+								<!-- eslint-enable svelte/no-navigation-without-resolve -->
+							{/each}
 						</div>
 					</div>
 				</section>

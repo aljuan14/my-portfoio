@@ -1,0 +1,367 @@
+{
+	"contact": {
+		"name": "Alfito Juanda",
+		"location": "Special Region of Yogyakarta, Indonesia",
+		"locationId": "Daerah Istimewa Yogyakarta, Indonesia",
+		"phone": "+62 822 7427 2717",
+		"email": "alfitojuanda14@gmail.com",
+		"links": [
+			{
+				"label": "linkedin.com/in/alfito-juanda",
+				"url": "https://www.linkedin.com/in/alfito-juanda/"
+			},
+			{ "label": "github.com/aljuan14", "url": "https://github.com/aljuan14" },
+			{ "label": "alfitojuanda.my.id", "url": "https://www.alfitojuanda.my.id" }
+		]
+	},
+	"en": {
+		"title": "AI & Fullstack Web Engineer",
+		"headings": {
+			"summary": "Summary",
+			"skills": "Skills",
+			"projects": "Projects",
+			"organizations": "Organizational Experience",
+			"education": "Education",
+			"achievements": "Achievements"
+		},
+		"techLabel": "Tech",
+		"summary": "Informatics graduate (Universitas Teknologi Yogyakarta, 2026) and AI & Fullstack Web Engineer specializing in machine learning, deep learning, and computer vision, and in delivering them through full-stack web applications. Built projects with Python, PyTorch, FastAPI, Next.js, React, and Supabase, including a journal-published facial classification system with 94.5% accuracy and a Top 10 finalist hackathon platform. Focused on data-driven solutions delivered on scope and on time.",
+		"skills": [
+			{
+				"category": "AI & Machine Learning",
+				"items": "Machine Learning, Deep Learning, Computer Vision, NLP, AI Agents, PyTorch, YOLOv11, FaceNet, SVM, Naive Bayes, TF-IDF, Bayesian Optimization"
+			},
+			{
+				"category": "Web Development",
+				"items": "Python, JavaScript, React, Next.js, FastAPI, Tailwind CSS, Leaflet.js"
+			},
+			{
+				"category": "Data & Databases",
+				"items": "SQL, PostgreSQL, Supabase, Data Cleaning & Validation, Exploratory Data Analysis (EDA), Data Visualization"
+			},
+			{
+				"category": "Cloud & Tools",
+				"items": "Docker, AWS App Runner, Vercel, Git/GitHub, Notion, Trello, Microsoft Office, Google Workspace"
+			},
+			{
+				"category": "Project Management",
+				"items": "Project Scheduling, Progress Tracking & Reporting, Technical Documentation, Cross-functional Coordination"
+			},
+			{
+				"category": "Languages",
+				"items": "Indonesian (native), English (highest TOEIC score in Aceh Province, 2022)"
+			}
+		],
+		"projects": [
+			{
+				"name": "Facial Ethnicity Detection System",
+				"context": "Journal Publication",
+				"date": "",
+				"link": {
+					"label": "jsret.knpub.com/index.php/jrest/article/view/983",
+					"url": "https://jsret.knpub.com/index.php/jrest/article/view/983"
+				},
+				"bullets": [
+					"Developed an ethnicity classification system from facial images that achieved 94.5% accuracy; the research was published in a scientific journal.",
+					"Extracted facial embeddings with FaceNet (PyTorch) and classified them with an SVM tuned through Bayesian Optimization.",
+					"Curated a custom, diverse facial dataset and exposed the model through a FastAPI backend."
+				],
+				"tech": "Python, PyTorch, FaceNet, SVM, Bayesian Optimization, FastAPI"
+			},
+			{
+				"name": "MediSync - AI Hospital Orchestration Platform",
+				"context": "Top 10 Finalist, Hackvidia Arkavidia 10",
+				"date": "2026",
+				"link": { "label": "medisync-sand.vercel.app", "url": "https://medisync-sand.vercel.app" },
+				"bullets": [
+					"Built a hospital orchestration platform that automates patient triage prioritization.",
+					"Integrated AI agents (Strands Agents) to generate clinical diagnosis suggestions for medical staff.",
+					"Implemented role-based access for Admin, Doctor, and Nurse users and deployed the backend on AWS App Runner."
+				],
+				"tech": "Next.js 16, FastAPI, Strands Agents, Supabase, AWS App Runner"
+			},
+			{
+				"name": "Jivara - AI Medication & Food Interaction Monitor",
+				"context": "Capstone Project, DBS Foundation x Dicoding",
+				"date": "2026",
+				"link": { "label": "jivara.web.id", "url": "https://www.jivara.web.id" },
+				"bullets": [
+					"Built a real-time computer vision system that detects medications and food through a webcam using YOLOv11.",
+					"Combined object detection with AI reasoning models to automatically cross-reference detected items for contraindications.",
+					"Delivered instant visual alerts that warn users about dangerous medication-food combinations."
+				],
+				"tech": "Python, YOLOv11, Deep Neural Networks, Computer Vision"
+			},
+			{
+				"name": "Warung Tante - Integrated POS & HRIS System",
+				"context": "Restaurant Management System",
+				"date": "",
+				"link": {
+					"label": "linkedin.com/posts/alfito-juanda (project post)",
+					"url": "https://www.linkedin.com/posts/alfito-juanda_saya-baru-saja-menyelesaikan-sebuah-project-activity-7421261646377013248-rETU"
+				},
+				"bullets": [
+					"Built an integrated point-of-sale (POS) and HR information system (HRIS) with real-time synchronized table states.",
+					"Implemented geolocation-based staff check-ins restricted to a 5 km radius using Leaflet.js.",
+					"Developed analytics dashboards for sales and staff monitoring."
+				],
+				"tech": "Next.js 14, Supabase (PostgreSQL), Tailwind CSS, Leaflet.js"
+			},
+			{
+				"name": "Fiscal Sentiment - Policy Text Classification",
+				"context": "Machine Learning / NLP",
+				"date": "",
+				"link": null,
+				"bullets": [
+					"Built text classification models using SVM and Naive Bayes with TF-IDF features to support fiscal policy analysis."
+				],
+				"tech": "SVM, Naive Bayes, TF-IDF, NLP"
+			},
+			{
+				"name": "ShipPal - B2B Matchmaking Platform",
+				"context": "AI Agents",
+				"date": "",
+				"link": null,
+				"bullets": [
+					"Built a B2B matchmaking platform (\"Tinder for Business\") that uses AI agents to match businesses."
+				],
+				"tech": "AI Agents"
+			},
+			{
+				"name": "Landing Pages - Warung Tante & Avocado Sandwich",
+				"context": "Web Development",
+				"date": "",
+				"link": null,
+				"links": [
+					{ "label": "warungtante.com", "url": "https://www.warungtante.com/" },
+					{ "label": "avocadosandwich.my.id", "url": "https://avocadosandwich.my.id/" }
+				],
+				"bullets": [
+					"Designed and launched landing pages for a restaurant (Warung Tante) highlighting its menu and atmosphere, and for a local band (Avocado Sandwich)."
+				],
+				"tech": "Web Development"
+			}
+		],
+		"organizations": [
+			{
+				"organization": "Data Sorceres",
+				"role": "Computer Vision Division",
+				"date": "",
+				"bullets": [
+					"Developed image processing algorithms and researched deep learning implementations for real-time object classification."
+				]
+			},
+			{
+				"organization": "Himpunan Mahasiswa Informatika (Informatics Student Association)",
+				"role": "Research & Technology (Ristek) Division",
+				"date": "",
+				"bullets": [
+					"Facilitated technical workshops and knowledge-sharing sessions on modern web frameworks and machine learning."
+				]
+			},
+			{
+				"organization": "UKM Robotika (Robotics Student Club)",
+				"role": "Public Relations Division",
+				"date": "",
+				"bullets": [
+					"Coordinated communication with external partners and sponsors, and published innovation project documentation for public engagement."
+				]
+			}
+		],
+		"education": [
+			{
+				"institution": "Universitas Teknologi Yogyakarta",
+				"degree": "Bachelor's Degree in Informatics (S1 Informatika)",
+				"date": "2022 - 2026"
+			},
+			{
+				"institution": "SMK Negeri 5 Telkom Banda Aceh",
+				"degree": "Vocational High School, Software Engineering",
+				"date": "2019 - 2022"
+			}
+		],
+		"achievements": [
+			{ "title": "Top 10 Finalist, Hackvidia - Arkavidia 10 (MediSync)", "date": "2026" },
+			{ "title": "Highest TOEIC Score in Aceh Province", "date": "2022" },
+			{ "title": "Medal of Excellence, LKS Cyber Security (National Level)", "date": "2021" },
+			{ "title": "1st Place, FLS2N Solo Guitar (City Level)", "date": "2021" },
+			{ "title": "2nd Place, KOSN Karate (Provincial Level)", "date": "2021" },
+			{ "title": "1st Place, English Debate (City Level)", "date": "2020" }
+		]
+	},
+	"id": {
+		"title": "AI & Fullstack Web Engineer",
+		"headings": {
+			"summary": "Ringkasan",
+			"skills": "Keahlian",
+			"projects": "Proyek",
+			"organizations": "Pengalaman Organisasi",
+			"education": "Pendidikan",
+			"achievements": "Prestasi"
+		},
+		"techLabel": "Teknologi",
+		"summary": "Lulusan S1 Informatika Universitas Teknologi Yogyakarta (2026) dan AI & Fullstack Web Engineer yang berfokus pada machine learning, deep learning, dan computer vision, serta penerapannya dalam aplikasi web full-stack. Membangun proyek dengan Python, PyTorch, FastAPI, Next.js, React, dan Supabase, termasuk sistem klasifikasi wajah yang dipublikasikan di jurnal ilmiah dengan akurasi 94,5% dan platform hackathon yang masuk Top 10 finalis. Berfokus pada solusi berbasis data yang tepat cakupan dan tepat waktu.",
+		"skills": [
+			{
+				"category": "AI & Machine Learning",
+				"items": "Machine Learning, Deep Learning, Computer Vision, NLP, AI Agents, PyTorch, YOLOv11, FaceNet, SVM, Naive Bayes, TF-IDF, Bayesian Optimization"
+			},
+			{
+				"category": "Pengembangan Web",
+				"items": "Python, JavaScript, React, Next.js, FastAPI, Tailwind CSS, Leaflet.js"
+			},
+			{
+				"category": "Data & Database",
+				"items": "SQL, PostgreSQL, Supabase, Data Cleaning & Validation, Exploratory Data Analysis (EDA), Visualisasi Data"
+			},
+			{
+				"category": "Cloud & Tools",
+				"items": "Docker, AWS App Runner, Vercel, Git/GitHub, Notion, Trello, Microsoft Office, Google Workspace"
+			},
+			{
+				"category": "Manajemen Proyek",
+				"items": "Penjadwalan Proyek, Pelacakan & Pelaporan Progres, Dokumentasi Teknis, Koordinasi Lintas Tim"
+			},
+			{
+				"category": "Bahasa",
+				"items": "Indonesia (bahasa ibu), Inggris (nilai TOEIC tertinggi Provinsi Aceh, 2022)"
+			}
+		],
+		"projects": [
+			{
+				"name": "Sistem Pendeteksi Suku dari Wajah",
+				"context": "Publikasi Jurnal",
+				"date": "",
+				"link": {
+					"label": "jsret.knpub.com/index.php/jrest/article/view/983",
+					"url": "https://jsret.knpub.com/index.php/jrest/article/view/983"
+				},
+				"bullets": [
+					"Mengembangkan sistem klasifikasi etnis dari citra wajah dengan akurasi 94,5%; hasil penelitian dipublikasikan di jurnal ilmiah.",
+					"Mengekstraksi embedding wajah dengan FaceNet (PyTorch) dan mengklasifikasikannya dengan SVM yang dioptimalkan menggunakan Bayesian Optimization.",
+					"Menyusun dataset wajah kustom yang beragam dan menyajikan model melalui backend FastAPI."
+				],
+				"tech": "Python, PyTorch, FaceNet, SVM, Bayesian Optimization, FastAPI"
+			},
+			{
+				"name": "MediSync - Platform Orkestrasi Rumah Sakit Berbasis AI",
+				"context": "Top 10 Finalis Hackvidia Arkavidia 10",
+				"date": "2026",
+				"link": { "label": "medisync-sand.vercel.app", "url": "https://medisync-sand.vercel.app" },
+				"bullets": [
+					"Membangun platform orkestrasi rumah sakit yang mengotomatiskan prioritas triase pasien.",
+					"Mengintegrasikan AI agents (Strands Agents) untuk menghasilkan saran diagnosis klinis bagi tenaga medis.",
+					"Menerapkan akses berbasis peran untuk Admin, Dokter, dan Perawat serta men-deploy backend di AWS App Runner."
+				],
+				"tech": "Next.js 16, FastAPI, Strands Agents, Supabase, AWS App Runner"
+			},
+			{
+				"name": "Jivara - AI Medication & Food Interaction Monitor",
+				"context": "Capstone Project DBS Foundation x Dicoding",
+				"date": "2026",
+				"link": { "label": "jivara.web.id", "url": "https://www.jivara.web.id" },
+				"bullets": [
+					"Membangun sistem computer vision real-time yang mendeteksi obat dan makanan melalui webcam menggunakan YOLOv11.",
+					"Menggabungkan deteksi objek dengan model AI reasoning untuk mencocokkan kontraindikasi item yang terdeteksi secara otomatis.",
+					"Menyajikan peringatan visual instan untuk kombinasi obat dan makanan yang berbahaya."
+				],
+				"tech": "Python, YOLOv11, Deep Neural Networks, Computer Vision"
+			},
+			{
+				"name": "Warung Tante - Sistem POS & HRIS Terintegrasi",
+				"context": "Sistem Manajemen Restoran",
+				"date": "",
+				"link": {
+					"label": "linkedin.com/posts/alfito-juanda (postingan proyek)",
+					"url": "https://www.linkedin.com/posts/alfito-juanda_saya-baru-saja-menyelesaikan-sebuah-project-activity-7421261646377013248-rETU"
+				},
+				"bullets": [
+					"Membangun sistem point-of-sale (POS) dan HRIS terintegrasi dengan status meja yang tersinkronisasi secara real-time.",
+					"Menerapkan absensi karyawan berbasis geolokasi dengan batas radius 5 km menggunakan Leaflet.js.",
+					"Mengembangkan dashboard analitik untuk pemantauan penjualan dan karyawan."
+				],
+				"tech": "Next.js 14, Supabase (PostgreSQL), Tailwind CSS, Leaflet.js"
+			},
+			{
+				"name": "Fiscal Sentiment - Klasifikasi Teks Kebijakan",
+				"context": "Machine Learning / NLP",
+				"date": "",
+				"link": null,
+				"bullets": [
+					"Membangun model klasifikasi teks menggunakan SVM dan Naive Bayes dengan fitur TF-IDF untuk mendukung analisis kebijakan fiskal."
+				],
+				"tech": "SVM, Naive Bayes, TF-IDF, NLP"
+			},
+			{
+				"name": "ShipPal - Platform B2B Matchmaking",
+				"context": "AI Agents",
+				"date": "",
+				"link": null,
+				"bullets": [
+					"Membangun platform B2B matchmaking (\"Tinder for Business\") yang menggunakan AI agents untuk mempertemukan pelaku bisnis."
+				],
+				"tech": "AI Agents"
+			},
+			{
+				"name": "Landing Page - Warung Tante & Avocado Sandwich",
+				"context": "Pengembangan Web",
+				"date": "",
+				"link": null,
+				"links": [
+					{ "label": "warungtante.com", "url": "https://www.warungtante.com/" },
+					{ "label": "avocadosandwich.my.id", "url": "https://avocadosandwich.my.id/" }
+				],
+				"bullets": [
+					"Merancang dan meluncurkan landing page untuk restoran (Warung Tante) yang menampilkan menu dan suasananya, serta untuk band lokal (Avocado Sandwich)."
+				],
+				"tech": "Pengembangan Web"
+			}
+		],
+		"organizations": [
+			{
+				"organization": "Data Sorceres",
+				"role": "Divisi Computer Vision",
+				"date": "",
+				"bullets": [
+					"Mengembangkan algoritma pengolahan citra dan meneliti penerapan deep learning untuk klasifikasi objek secara real-time."
+				]
+			},
+			{
+				"organization": "Himpunan Mahasiswa Informatika",
+				"role": "Divisi Riset dan Teknologi (Ristek)",
+				"date": "",
+				"bullets": [
+					"Memfasilitasi workshop teknis dan sesi berbagi pengetahuan tentang framework web modern dan machine learning."
+				]
+			},
+			{
+				"organization": "UKM Robotika",
+				"role": "Divisi Hubungan Masyarakat",
+				"date": "",
+				"bullets": [
+					"Mengoordinasikan komunikasi dengan mitra eksternal dan sponsor, serta memublikasikan dokumentasi proyek inovasi untuk publik."
+				]
+			}
+		],
+		"education": [
+			{
+				"institution": "Universitas Teknologi Yogyakarta",
+				"degree": "S1 Informatika",
+				"date": "2022 - 2026"
+			},
+			{
+				"institution": "SMK Negeri 5 Telkom Banda Aceh",
+				"degree": "Rekayasa Perangkat Lunak",
+				"date": "2019 - 2022"
+			}
+		],
+		"achievements": [
+			{ "title": "Top 10 Finalis Hackvidia - Arkavidia 10 (MediSync)", "date": "2026" },
+			{ "title": "Nilai TOEIC Tertinggi Provinsi Aceh", "date": "2022" },
+			{ "title": "Medal of Excellence LKS Cyber Security Tingkat Nasional", "date": "2021" },
+			{ "title": "Juara 1 FLS2N Gitar Solo Tingkat Kota", "date": "2021" },
+			{ "title": "Juara 2 KOSN Karate Tingkat Provinsi", "date": "2021" },
+			{ "title": "Juara 1 Debat Bahasa Inggris Tingkat Kota", "date": "2020" }
+		]
+	}
+}

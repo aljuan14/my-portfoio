@@ -30,6 +30,11 @@
 	});
 </script>
 
+<svelte:head>
+	<title>Page Not Found — Alfito Juanda</title>
+	<meta name="robots" content="noindex" />
+</svelte:head>
+
 <svelte:window bind:scrollY on:mousemove={handleMouseMove} />
 
 <main

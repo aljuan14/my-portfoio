@@ -4,6 +4,8 @@
 	import '@fontsource/outfit/700.css';
 	import '@fontsource/outfit/900.css';
 	import './layout.css';
+	import 'lenis/dist/lenis.css';
+	import Lenis from 'lenis';
 	import IntroAnimation from '$lib/components/IntroAnimation.svelte';
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
@@ -16,6 +18,20 @@
 	// Intro animation state
 	let showIntro = $state(false);
 	let introComplete = $state(false);
+
+	// Smooth wheel scrolling; skipped for reduced motion, touch keeps native scrolling
+	onMount(() => {
+		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+		const lenis = new Lenis({
+			autoRaf: true,
+			lerp: 0.1,
+			// Smooth #projects / #contact jumps; sections use scroll-mt to clear the top bar
+			anchors: true
+		});
+
+		return () => lenis.destroy();
+	});
 
 	onMount(() => {
 		// Only show intro on homepage and if not shown before in this session
@@ -73,10 +89,10 @@
 {/if}
 
 <div
-	class="font-sans antialiased text-zinc-50 selection:bg-zinc-300 selection:text-zinc-900 bg-zinc-950 min-h-screen flex flex-col items-center overflow-x-hidden selection:bg-white/20 transition-opacity duration-500"
+	class="font-sans antialiased text-zinc-50 selection:bg-zinc-300 selection:text-zinc-900 bg-zinc-950 min-h-screen flex flex-col items-center overflow-x-clip selection:bg-white/20 transition-opacity duration-500"
 	class:opacity-0={!introComplete}
 >
-	{#if $page.url.pathname.startsWith('/blog/')}
+	{#if $page.url.pathname.startsWith('/blog')}
 		<nav
 			class="fixed top-2 left-2 right-2 z-50 h-7 bg-zinc-800/70 backdrop-blur-2xl border border-white/10 rounded-xl flex items-center justify-between px-4 select-none shadow-lg"
 		>
@@ -87,11 +103,11 @@
 				<svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
 					<path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
 				</svg>
-				Desktop
+				Home
 			</a>
 			<span class="text-[12px] text-zinc-500">Alfito Juanda</span>
 			<a
-				href={resolve('/?open=blog')}
+				href={resolve('/blog')}
 				class="text-[12px] font-medium text-zinc-400 hover:text-white transition-colors"
 			>
 				All Posts
@@ -104,8 +120,13 @@
 
 <style>
 	:global(html) {
-		scroll-behavior: smooth;
 		background-color: #09090b; /* zinc-950 */
+	}
+	/* Native fallback when Lenis is off; Lenis needs scroll-behavior left at auto */
+	@media (prefers-reduced-motion: no-preference) {
+		:global(html:not(.lenis)) {
+			scroll-behavior: smooth;
+		}
 	}
 	:global(body) {
 		font-family: 'Inter', sans-serif;
