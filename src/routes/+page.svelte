@@ -42,6 +42,9 @@
 					builtWith: 'Built with',
 					threatFeed: 'THREAT FEED - SECURE',
 					cloudDeploy: 'CLOUD DEPLOY',
+					live: 'Live',
+					home: 'Home',
+					toggleLang: 'Switch to Indonesian',
 					activities: 'Activities',
 					contactTitle: 'GET IN TOUCH',
 					contactLead:
@@ -52,7 +55,7 @@
 				}
 			: {
 					welcome: 'SELAMAT DATANG DI',
-					work: 'Tersedia untuk bekerja',
+					work: 'Terbuka untuk bekerja',
 					viewWork: 'Lihat Karya Saya',
 					getInTouch: 'Hubungi Saya',
 					viewCv: 'Lihat CV Interaktif',
@@ -64,8 +67,11 @@
 					techArsenal: 'Kemampuan Teknis',
 					visit: 'Kunjungi',
 					builtWith: 'Dibuat dengan',
-					threatFeed: 'THREAT FEED - SECURE',
-					cloudDeploy: 'CLOUD DEPLOY',
+					threatFeed: 'PANTAUAN ANCAMAN - AMAN',
+					cloudDeploy: 'DEPLOY CLOUD',
+					live: 'Aktif',
+					home: 'Beranda',
+					toggleLang: 'Ganti ke Bahasa Inggris',
 					activities: 'Aktivitas',
 					contactTitle: 'HUBUNGI SAYA',
 					contactLead:
@@ -272,7 +278,8 @@
 			<a
 				href="/"
 				class="p-2 bg-white/10 rounded-xl hover:bg-white/20 transition-colors group"
-				title="Home"
+				title={t.home}
+				aria-label={t.home}
 			>
 				<svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
 					><path
@@ -384,7 +391,8 @@
 			<button
 				onclick={() => (lang = lang === 'en' ? 'id' : 'en')}
 				class="p-2 w-10 h-10 md:w-12 md:h-12 ml-1 md:ml-0 flex items-center justify-center bg-emerald-500/20 border-2 border-emerald-500/50 rounded-xl text-emerald-400 hover:bg-emerald-500/30 hover:border-emerald-400 hover:text-emerald-300 hover:shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-all md:mb-2 font-black text-sm shadow-[0_0_10px_rgba(16,185,129,0.2)]"
-				title="Toggle Language"
+				title={t.toggleLang}
+				aria-label={t.toggleLang}
 			>
 				{lang.toUpperCase()}
 			</button>
@@ -422,7 +430,7 @@
 						<div class="flex justify-between items-center text-xs">
 							<div class="flex items-center gap-2 text-emerald-400">
 								<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-								Live
+								{t.live}
 							</div>
 							<span class="text-zinc-500 font-mono">1,374 req/min</span>
 						</div>

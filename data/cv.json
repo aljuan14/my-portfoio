@@ -6,7 +6,7 @@
 		"phone": "+62 822 7427 2717",
 		"website": "https://www.alfitojuanda.my.id",
 		"summary": "Lulusan S1 Informatika (2026) yang berfokus pada pengembangan solusi Artificial Intelligence (Machine Learning, Deep Learning, dan Computer Vision) serta implementasinya pada aplikasi Fullstack Web. Berpengalaman mengembangkan proyek berbasis Python, FastAPI, React, Next.js, dan Supabase, serta aktif dalam kegiatan organisasi dan riset teknologi. Memiliki minat kuat dalam membangun solusi berbasis data yang dapat menyelesaikan permasalahan nyata secara efisien, tepat waktu dan sesuai cakupan (on-scope & on-time)",
-		"shortSummary": "AI & Fullstack Web Engineer. Building data-driven, on-scope, and on-time solutions.",
+		"shortSummary": "AI & Fullstack Web Engineer. Membangun solusi berbasis data yang tepat cakupan dan tepat waktu.",
 		"location": {
 			"address": "DI Yogyakarta, 55285",
 			"postalCode": "",
@@ -45,21 +45,21 @@
 		"Computer Vision",
 		"AI Agents",
 		"Git/GitHub",
-		"Project Scheduling",
-		"Technical Documentation"
+		"Penjadwalan Proyek",
+		"Dokumentasi Teknis"
 	],
 	"skillsByCategory": [
 		{
-			"category": "Project Management & Collaboration",
+			"category": "Manajemen Proyek & Kolaborasi",
 			"skills": [
-				"Project Scheduling",
-				"Progress Tracking & Reporting",
-				"Technical Documentation",
-				"Cross-functional Coordination"
+				"Penjadwalan Proyek",
+				"Pelacakan & Pelaporan Progres",
+				"Dokumentasi Teknis",
+				"Koordinasi Lintas Fungsi"
 			]
 		},
 		{
-			"category": "Management Tools",
+			"category": "Perangkat Manajemen",
 			"skills": ["Notion", "Git/GitHub", "Microsoft Office / Google Workspace"]
 		},
 		{
@@ -79,24 +79,24 @@
 	"experiences_in_organization": [
 		{
 			"organization": "Data Sorceres",
-			"position": "Computer Vision Division",
+			"position": "Divisi Computer Vision",
 			"startDate": "",
-			"endDate": "Present",
-			"summary": "Develop image processing algorithms and research deep learning implementation for real-time object classification."
+			"endDate": "Sekarang",
+			"summary": "Mengembangkan algoritma pengolahan citra dan meneliti penerapan deep learning untuk klasifikasi objek secara real-time."
 		},
 		{
 			"organization": "Himpunan Mahasiswa Informatika",
-			"position": "Ristek Division",
+			"position": "Divisi Riset dan Teknologi (Ristek)",
 			"startDate": "",
-			"endDate": "Present",
-			"summary": "Facilitate technical workshops and knowledge-sharing sessions regarding modern web frameworks and machine learning."
+			"endDate": "Sekarang",
+			"summary": "Memfasilitasi workshop teknis dan sesi berbagi pengetahuan seputar framework web modern dan machine learning."
 		},
 		{
 			"organization": "UKM Robotika",
-			"position": "Public Relations Division",
+			"position": "Divisi Hubungan Masyarakat",
 			"startDate": "",
-			"endDate": "Present",
-			"summary": "Coordinate communication with external partners and sponsors, and publish innovation project documentation for public engagement."
+			"endDate": "Sekarang",
+			"summary": "Mengoordinasikan komunikasi dengan mitra eksternal dan sponsor, serta memublikasikan dokumentasi proyek inovasi kepada publik."
 		}
 	],
 	"projects": [
@@ -104,11 +104,11 @@
 			"name": "Sistem Pendeteksi Suku dari Wajah",
 			"url": "https://jsret.knpub.com/index.php/jrest/article/view/983",
 			"date": "",
-			"summary": "Publikasi Jurnal - Sistem klasifikasi etnis dengan akurasi 94.5%",
+			"summary": "Publikasi Jurnal - Sistem klasifikasi etnis dari wajah dengan akurasi 94,5%",
 			"highlights": [
-				"FaceNet embeddings mapped to SVM classifier",
-				"Tuned via Bayesian Optimization",
-				"Custom diverse dataset curation"
+				"Embedding wajah FaceNet diklasifikasikan dengan SVM",
+				"Dioptimalkan dengan Bayesian Optimization",
+				"Kurasi dataset wajah kustom yang beragam"
 			],
 			"stack": "Python, FastAPI, PyTorch (FaceNet), SVM"
 		},
@@ -116,11 +116,11 @@
 			"name": "MediSync",
 			"url": "medisync-sand.vercel.app",
 			"date": "",
-			"summary": "AI Hospital Orchestration (Top 10 Finalis Hackvidia Arkavidia 10)",
+			"summary": "Orkestrasi Rumah Sakit Berbasis AI (Top 10 Finalis Hackvidia Arkavidia 10)",
 			"highlights": [
-				"Automated patient triage prioritization",
-				"AI-powered clinical diagnosis suggestions",
-				"Multi-role access (Admin, Doctor, Nurse)"
+				"Prioritas triase pasien secara otomatis",
+				"Saran diagnosis klinis berbasis AI",
+				"Akses multi-peran (Admin, Dokter, Perawat)"
 			],
 			"stack": "Next.js 16, FastAPI, Strands AI Agents, Supabase, AWS App Runner"
 		},
@@ -128,11 +128,11 @@
 			"name": "Jivara",
 			"url": "www.jivara.web.id",
 			"date": "",
-			"summary": "AI Medication & Food Interaction Monitor - Capstone project DBS Foundation x Dicoding 2026; integrasi model Computer Vision & AI reasoning.",
+			"summary": "Pemantau Interaksi Obat & Makanan Berbasis AI - Capstone project DBS Foundation x Dicoding 2026 yang mengintegrasikan model Computer Vision dan AI reasoning.",
 			"highlights": [
-				"Real-time object detection via webcam",
-				"Automated cross-referencing of contraindications",
-				"Instant visual alerts for dangerous combinations"
+				"Deteksi objek real-time melalui webcam",
+				"Pengecekan kontraindikasi secara otomatis",
+				"Peringatan visual instan untuk kombinasi berbahaya"
 			],
 			"stack": "Python, YOLOv11, Deep Neural Network"
 		},
@@ -142,9 +142,9 @@
 			"date": "",
 			"summary": "Ekosistem POS & HRIS Terintegrasi",
 			"highlights": [
-				"Real-time synchronised table states",
-				"Geolocation check-ins (5km radius restriction)",
-				"Dashboard analytics for sales & staff"
+				"Status meja tersinkronisasi secara real-time",
+				"Absensi berbasis geolokasi (radius maksimal 5 km)",
+				"Dashboard analitik penjualan & karyawan"
 			],
 			"stack": "Next.js 14, Supabase (PostgreSQL), Tailwind CSS, Leaflet.js"
 		},
@@ -152,7 +152,7 @@
 			"name": "ShipPal",
 			"url": "",
 			"date": "",
-			"summary": "B2B Matchmaking platform ('Tinder for Business') using AI Agents.",
+			"summary": "Platform B2B matchmaking (\"Tinder untuk Bisnis\") berbasis AI Agents.",
 			"highlights": [],
 			"stack": "AI Agents, Matchmaking"
 		},
@@ -160,7 +160,7 @@
 			"name": "Fiscal Sentiment",
 			"url": "",
 			"date": "",
-			"summary": "Machine Learning (SVM/Naive Bayes) text classification using TF-IDF for policy analysis.",
+			"summary": "Klasifikasi teks dengan Machine Learning (SVM/Naive Bayes) dan TF-IDF untuk analisis kebijakan fiskal.",
 			"highlights": [],
 			"stack": "SVM, NLP"
 		}
@@ -172,7 +172,7 @@
 			"issuer": ""
 		},
 		{
-			"title": "Nilai Tertinggi TOEIC (Test Of English International Language) Provinsi Aceh",
+			"title": "Nilai TOEIC Tertinggi Provinsi Aceh",
 			"date": "2022",
 			"issuer": ""
 		},
